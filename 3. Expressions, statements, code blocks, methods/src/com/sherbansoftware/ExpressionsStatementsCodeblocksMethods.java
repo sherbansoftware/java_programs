@@ -15,7 +15,7 @@ public class ExpressionsStatementsCodeblocksMethods {
     //overloading methods with unique parameters
     public static boolean doStuff(boolean value, boolean status) {
         return value || status;
-    } 
+    }
 
     public static boolean doStuff() {
         return false;
