@@ -18,7 +18,6 @@ public class Device {
     }
 
     public String getPowerStatus() {
-
         return powerStatus;
     }
 

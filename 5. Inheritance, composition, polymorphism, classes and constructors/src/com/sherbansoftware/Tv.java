@@ -12,14 +12,17 @@ package com.sherbansoftware;
  * An object store his state in fields.  * An object may have hundred of fields but for simplicity I chose to present only 3 fields.
  * An object expose his behavior with methods
  * Tv extends Device which makes Tv a special object of a Device class
- * A Tv is also a Device.
+ * A Tv is also a Device. is a relationship
  */
+
 public class Tv extends Device implements Cloneable {
     //encapsulation hide the fields and methods from public access.
     //The internal representation of an object is hidden from outside
     //State of a Tv object, extra fields
     private String brand = "Samsung";
+    //a Tv has a Resolution - has a relationship
     private Resolution resolution = new Resolution(1920, 1080); //Early, instance will be created at class load time
+    //a Tv has a Resolution - has a relationship
     private Screen screen;
 
     private String location;  //extra object state which does not depend on the creation of object
@@ -44,7 +47,7 @@ public class Tv extends Device implements Cloneable {
     //constructor calling another constructor using this
     public Tv() {
         this(null, null, null); //must be first line
-        System.out.println("Empty constructor called");
+        System.out.println("Empty Tv constructor called");
     }
 
     //constructor which initializes 1 object's param
@@ -93,10 +96,10 @@ public class Tv extends Device implements Cloneable {
     // - objects outside this class, outside this package but only by subclasses through inheritance
     protected void turnOn() {
         super.setPowerStatus("Turned on");
-        System.out.println("Tv: " + getBrand() + " with Resolution: " + getResolution().getHeight() + " x " + getResolution().getWeight() + ", Screen size: " + getScreen().getSize() + " Processor: " + super.getInternalProcessor() + " is: " + super.getPowerStatus());
+        System.out.println("Tv: " + getBrand() + " with Resolution: " + getResolution().getHeight() + " x " + getResolution().getWeight() + ", Screen type: " + getScreen().getType() + " Processor: " + super.getInternalProcessor() + " is: " + super.getPowerStatus());
     }
 
-    public String getLocation() {
+    private String getLocation() {
         return location;
     }
 
@@ -106,7 +109,7 @@ public class Tv extends Device implements Cloneable {
 
     //default access modifier. visible within the class and inside the package
     void turnOff() {
-        System.out.println("Tv: " + getBrand() + " with Resolution: " + getResolution().getHeight() + " x " + getResolution().getWeight() + ", Screen size: " + getScreen().getSize() + " Processor: " + super.getInternalProcessor() + " is: " + super.getPowerStatus());
+        System.out.println("Tv: " + getBrand() + " with Resolution: " + getResolution().getHeight() + " x " + getResolution().getWeight() + ", Screen type: " + getScreen().getType() + " Processor: " + super.getInternalProcessor() + " from " + location + " is: " + super.getPowerStatus());
     }
 
     @Override
@@ -131,13 +134,15 @@ public class Tv extends Device implements Cloneable {
 
     //private access modifier. visible within the class
     private void smartTv() {
-        System.out.println("Smart TV enabled");
+        setLocation("Kitchen");
+        System.out.println("The Smart TV from " + getLocation() + " is enabled");
     }
 
     //clones the object. super keyword access the parent method
     public Object getClone() throws CloneNotSupportedException {
-        smartTv(); //assume we start smartTv when clone (just for exercise)
+        smartTv(); //assume we start smartTv when clone (not real, just for exercise)
         setLocation("Living room"); //set another state for this object
+        setResolution(new Resolution(3840, 1600)); //assume set a new resolution on clone (not real)
         return super.clone();  //call parent method
     }
 
