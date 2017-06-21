@@ -36,7 +36,7 @@ public class Main {
             type = samsung.showPolymorphism();
             System.out.println(type);
         }
-        
+
         // Tv class implements Cloneable interface to avoid CloneNotSupportedException being thrown
         // define a cloned object
         Tv samsungCloned = (Tv) samsung.getClone();
