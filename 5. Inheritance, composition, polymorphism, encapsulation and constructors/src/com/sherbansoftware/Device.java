@@ -13,6 +13,9 @@ public class Device {
         this.powerStatus = powerStatus;
     }
 
+    public String showPolymorphism(){
+        return getClass().toString();
+    }
     public void setPowerStatus(String powerStatus) {
         this.powerStatus = powerStatus;
     }
