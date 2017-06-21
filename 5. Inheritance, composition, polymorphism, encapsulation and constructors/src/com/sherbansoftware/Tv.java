@@ -12,8 +12,21 @@ package com.sherbansoftware;
  * An object store his state in fields.  * An object may have hundred of fields but for simplicity I chose to present only 3 fields.
  * An object expose his behavior with methods
  * Tv extends Device which makes Tv a special object of a Device class
- * A Tv is also a Device. is a relationship
+ * A Tv is also a Device. Inheritance represents the IS-A relationship, also known as parent-child relationship.
+ *
+ * 1) With method overloading we can increase the readability of the program.
+ * 2) With method overriding we can provide the specific implementation of the method that is already provided by its super class.
+ *
+ * 1) Method overloading is performed within class.
+ * 2) Method overriding occurs in two classes that have IS-A (inheritance) relationship.
+ *
+ * 1) For method overloading, parameter must be different.
+ * 2) For method overriding, parameter must be same, only method name changes.
+ *
+ * 1) Method overloading actions at compile time polymorphism.
+ * 2) Method overriding actions at run time polymorphism.
  */
+
 
 public class Tv extends Device implements Cloneable {
     //encapsulation hide the fields and methods from public access.
@@ -22,7 +35,7 @@ public class Tv extends Device implements Cloneable {
     private String brand = "Samsung";
     //a Tv has a Resolution - has a relationship
     private Resolution resolution = new Resolution(1920, 1080); //Early, instance will be created at class load time
-    //a Tv has a Resolution - has a relationship
+    //a Tv has a Resolution - has a relationship. Tv object has a Screen object
     private Screen screen;
 
     private String location;  //extra object state which does not depend on the creation of object
@@ -99,9 +112,10 @@ public class Tv extends Device implements Cloneable {
         System.out.println("Tv: " + getBrand() + " with Resolution: " + getResolution().getHeight() + " x " + getResolution().getWeight() + ", Screen type: " + getScreen().getType() + " Processor: " + super.getInternalProcessor() + " is: " + super.getPowerStatus());
     }
 
-    private String getLocation() {
+    //private access modifier. visible within the class
+    private final String getLocation() {
         return location;
-    }
+    } //final methods cannot override them
 
     public void setLocation(String location) {
         this.location = location;

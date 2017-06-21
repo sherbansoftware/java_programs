@@ -25,12 +25,18 @@ public class Main {
         String type = samsung.getScreen().getType(); //access a particular screen attribute using the Tv object.
         samsung.getScreen().setType("Q" + type); //Method chaining
 
+        /*
+        instanceof operator is used to test whether the object is an instance
+        of the specified class or subclass or interface
+        */
         //polymorphism example
-        type = device.showPolymorphism();
-        System.out.println(type);
-        type = samsung.showPolymorphism();
-        System.out.println(type);
-
+        if (type instanceof String) {
+            type = device.showPolymorphism();
+            System.out.println(type);
+            type = samsung.showPolymorphism();
+            System.out.println(type);
+        }
+        
         // Tv class implements Cloneable interface to avoid CloneNotSupportedException being thrown
         // define a cloned object
         Tv samsungCloned = (Tv) samsung.getClone();
