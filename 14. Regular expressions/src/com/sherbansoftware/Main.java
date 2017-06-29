@@ -1,5 +1,10 @@
 package com.sherbansoftware;
 
+/**
+ * The Java Regular Expression is an API to define pattern for searching or manipulating strings.
+ * It is used to define constraint on strings. (passwords, emails, etc)
+ * Java Regex API provides 1 interface and 3 classes in java.util.regex package.
+ */
 public class Main {
 
     public static void main(String[] args) {
