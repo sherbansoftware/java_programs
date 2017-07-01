@@ -19,34 +19,50 @@ public class Main {
         return (double) sum / (double) arr.length;
     }
 
-
-    private static void listItems(){
-        carList.listItems(carList.getCarArrayList());
+    //private static methods from the switch statement
+    private static void listItems() {
+        carList.listItems(carList.getCarLinkedList());
     }
 
     private static void addItem() {
-        carList.addItem(new Car("Car to be added", "Model to be added"));
+        System.out.print("Enter a car manufacturer: ");
+        String carManufacturer = scanner.nextLine();
+        System.out.print("Enter a car model: ");
+        String carModel = scanner.nextLine();
+        Car carToBeAdded = new Car(carManufacturer, carModel);
+        carList.addNewItem(carToBeAdded);
     }
 
     private static void modifyItem() {
         System.out.print("Enter item number: ");
         int itemNo = scanner.nextInt();
         scanner.nextLine();
-        carList.modifyItem(itemNo - 1, new Car("Car to be modified", "Model to be modified"));
+
+        Car carToBeModified = new Car("Manufacturer to be modified", "Model to be modified");
+        //Note that for the user should not use an index to access particular elements in order to modify a car item. Just as example.
+        carList.modifyItem(itemNo - 1, carToBeModified);  // //call to modify a car based on it's index
+        System.out.println();
+        carList.modifyItem(new Car("Dacia", "Berlina")); //call to modify a specific car
     }
 
     private static void removeItem() {
         System.out.print("Enter item number: ");
         int itemNo = scanner.nextInt();
         scanner.nextLine();
-        carList.removeItem(itemNo - 1);
+        //Note that for the user should not use an index to access particular elements in order to remove a car item. Just as example.
+        carList.removeItem(itemNo - 1); //call to remove a car based on it's index
+        carList.removeItem(new Car("Dacia", "Berlina"));  //call to remove a specific car
 
     }
 
     private static void searchForItem() {
-        Car searchedCar = new Car("Dacia", "Berlina");
+        System.out.print("Enter a car manufacturer to be searched: ");
+        String carManufacturer = scanner.nextLine();
+        System.out.print("Enter a car model to be searched: ");
+        String carModel = scanner.nextLine();
+        Car searchedCar = new Car(carManufacturer, carModel);
         if (carList.findItem(searchedCar) != null) {
-            System.out.println("Found " + searchedCar.getManufacturer() + " " + searchedCar.getModel() + " in  our car list");
+            System.out.println("Found " + searchedCar.getManufacturer() + " " + searchedCar.getModel() + " in  our car list" + " at position: " + carList.getCarLinkedList().indexOf(searchedCar));
         } else {
             System.out.println(searchedCar.getManufacturer() + " " + searchedCar.getModel() + " is not in the car list");
         }
@@ -63,7 +79,7 @@ public class Main {
         System.out.println("\t 6 - To quit the application.");
     }
 
-
+    //Entry point for JVM
     public static void main(String[] args) {
         int[] arrayOfInt = new int[5];//declaration and instantiation, space for 5 elements. [] may be after or before variable name.
         arrayOfInt[0] = 5; //initialization of first element
@@ -99,13 +115,13 @@ public class Main {
         System.out.println("The average is: " + average);
 
         //define a List of cars which has it s size allocated dynamically
-        carList.addItem(new Car("Dacia", "1310"));
-        carList.addItem(new Car("Dacia", "Sandero"));
-        carList.addItem(new Car("Dacia", "Logan"));
-        carList.addItem(new Car("Dacia", "Logan MCV"));
+        carList.addNewItem(new Car("Dacia", "1310"));
+        carList.addNewItem(new Car("Dacia", "Sandero"));
+        carList.addNewItem(new Car("Dacia", "Logan"));
+        carList.addNewItem(new Car("Dacia", "Logan MCV"));
         Car findCar = new Car("Dacia", "Dokker");
-        carList.addItem(findCar);
-        carList.addItem(new Car("Dacia", "Lodgy"));
+        carList.addNewItem(findCar);
+        carList.addNewItem(new Car("Dacia", "Lodgy"));
 
 
         carList.modifyItem(0, new Car("Dacia", "Berlina"));
@@ -114,11 +130,11 @@ public class Main {
 
         carList.listItems(carList.getCarLinkedList());
 
-        carList.populateArrayList();
+        carList.populateListWithObjects();
 
         carList.removeItem(3);
 
-        carList.listItems(carList.getCarArrayList());
+        carList.listItems(carList.getCarLinkedList());
 
         boolean quit = false;
         int choice = 0;

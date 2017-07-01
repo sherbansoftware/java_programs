@@ -1,6 +1,5 @@
 package com.sherbansoftware;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -10,25 +9,36 @@ import java.util.List;
  * For object manipulation use LinkList instead
  */
 public class CarList {
-    //actual state a carArrayList object contains a list of car objects
-    private ArrayList<Car> carArrayList = new ArrayList<>(); //early instance create a new generic carArrayList
-    private LinkedList<Car> carLinkedList = new LinkedList<>();
-
-    public ArrayList<Car> getCarArrayList() {
-        return carArrayList;
+    //actual state a carLinkedList object contains a list of car objects
+    //early instance to create a new generic carList that is instantiated with the LinkedList empty constructor
+    private List<Car> carLinkedList = new LinkedList<>();
+    //If you do not use a early instance you can instantiate the carLinkedList object in the CarList constructor:
+    /*
+    //used early instance in this case. Just for example
+    public CarList(){
+        this.carLinkedList = new new LinkedList<>();
     }
+    */
 
-    public LinkedList<Car> getCarLinkedList() {
+    public List<Car> getCarLinkedList() {
         return carLinkedList;
     }
 
-    //add a car object to list
-    public void addItem(Car car) {
+    //add a car object to list and return true if the item has added or false otherwise
+    public boolean addNewItem(Car car) {
+        if (findItem(car, carLinkedList) >= 0){
+            System.out.println("The car: " + car.getManufacturer() + " " + car.getModel() + " is already in list");
+            return false;
+        }
+
         this.carLinkedList.add(car);
         System.out.println("The car object count is: " + carLinkedList.size());
+        System.out.println("\t Added: " + car.getManufacturer() + " " + car.getModel());
+        return true;
     }
 
-    //modify item without an index, call the modify method with index and object as param
+    //modifyItem method based on a new Car object.
+    //Call the modifyItem method based on an index and new Car object.
     public void modifyItem(Car newCar) {
         int position = findItem(newCar, carLinkedList);
         if (position >= 0) {
@@ -36,14 +46,15 @@ public class CarList {
         }
     }
 
-    //modify item with an index
+    //modifyItem method based on an index and new Car object.
     public void modifyItem(int index, Car newCar) {
         carLinkedList.set(index, newCar);
         int position = index + 1;
-        System.out.println("Car index " + position + " has been modified with: " + getItem(index).getModel());
+        System.out.println("Car index " + position + " has been modified with new Model: " + getItem(index).getModel() + " and Manufacturer: " + getItem(index).getManufacturer());
     }
 
-    //remove a car object from list based on object, call the removeItem method based on an index
+    //removeItem method removes the car object parsed as parameter from list.
+    // Call the removeItem method that removes a car object from list based on it's index
     public void removeItem(Car carToBeRemoved) {
         int position = findItem(carToBeRemoved, carLinkedList);
         if (position >= 0) {
@@ -51,16 +62,16 @@ public class CarList {
         }
     }
 
-    //remove a car object from list based on it's index
+    //removeItem method removes a car object from list based on it's index
     public void removeItem(int position) {
         Car carToRemove = carLinkedList.get(position);
         carLinkedList.remove(carToRemove);
     }
 
-    public void populateArrayList() {
-        this.carArrayList.add(new Car("Dacia", "1310"));
-        this.carArrayList.add(new Car("Dacia", "Dokker VAN"));
-        this.carArrayList.add(new Car("Dacia", "New Sandero"));
+    public void populateListWithObjects() {
+        this.carLinkedList.add(new Car("Dacia", "1310"));
+        this.carLinkedList.add(new Car("Dacia", "Dokker VAN"));
+        this.carLinkedList.add(new Car("Dacia", "New Sandero"));
     }
 
     private Car getItem(int index) {
@@ -71,11 +82,11 @@ public class CarList {
         System.out.println("The list object contains " + list.size() + " car objects");
         //Traversing list through for
         for (int i = 0; i < list.size(); i++) {
-            System.out.println("\t Car: " + (i + 1) + " - Model: " + getCarLinkedList().get(i).getModel() + ". Manufacturer: " + getCarLinkedList().get(i).getManufacturer());
+            System.out.println("\t Car: " + (i + 1) + " - Manufacturer: " + getCarLinkedList().get(i).getManufacturer() + ". Model: " + getCarLinkedList().get(i).getModel());
         }
     }
 
-    //find item and return an object
+    //public method to find item and return a Car object. Accessed from outside class
     public Car findItem(Car searchedCar) {
         boolean exists = carLinkedList.contains(searchedCar);
         int position = 0;
@@ -88,7 +99,7 @@ public class CarList {
         return carLinkedList.get(position);
     }
 
-    //find item and return an index
+    //public method to find item and return it's index. Accessed from outside class
     public int findItem(Car searchedCar, List list) {
         return list.indexOf(searchedCar);
     }
