@@ -4,6 +4,7 @@ package com.sherbansoftware;
  * Created by Mihai Serban on 6/17/2017.
  */
 public class Resolution {
+    //actual state
     private int height;
     private int weight;
 
