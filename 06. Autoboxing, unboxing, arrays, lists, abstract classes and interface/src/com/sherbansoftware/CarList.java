@@ -10,44 +10,59 @@ import java.util.List;
  */
 public class CarList {
     //actual state a carLinkedList object contains a list of car objects
-    //early instance to create a new generic carList that is instantiated with the LinkedList empty constructor
+    //early instance to create a new generic carList that is instantiated with the empty List constructor
     private List<Car> carLinkedList = new LinkedList<>();
-    //If you do not use a early instance you can instantiate the carLinkedList object in the CarList constructor:
+    //If you do not use a early instance you can instantiate the empty List object in the CarList constructor:
     /*
-    //used early instance in this case. Just for example
+    // used early instance in this case. Just for example
+    // instantiate the empty List object in the CarList constructor:
     public CarList(){
-        this.carLinkedList = new new LinkedList<>();
+        this.carLinkedList = new LinkedList<>(); //empty list. (no values)
     }
     */
 
+    //getter for List
     public List<Car> getCarLinkedList() {
         return carLinkedList;
     }
 
     //add a car object to list and return true if the item has added or false otherwise
-    public boolean addNewItem(Car car) {
-        if (findItem(car, carLinkedList) >= 0){
-            System.out.println("The car: " + car.getManufacturer() + " " + car.getModel() + " is already in list");
+    public boolean addNewItem(Car newCar) {
+        if (findItem(newCar.getManufacturer()) >= 0) {
+            System.out.println("The car: " + newCar.getManufacturer() + " " + newCar.getModel() + " is already on list");
             return false;
         }
 
-        this.carLinkedList.add(car);
-        System.out.println("The car object count is: " + carLinkedList.size());
-        System.out.println("\t Added: " + car.getManufacturer() + " " + car.getModel());
+        this.carLinkedList.add(newCar);
+        System.out.println("The new car object count is: " + carLinkedList.size());
+        System.out.println("\t Added: " + newCar.getManufacturer() + " " + newCar.getModel());
+        return true; //successfully added the item
+    }
+
+    //Overload updateItem
+    //updateItem method based on an old and a new Car object.
+    public boolean updateItem(Car oldCar, Car newCar) {
+        int foundPosition = findItem(oldCar, carLinkedList);
+        if (foundPosition < 0) {
+            System.out.println(oldCar.getManufacturer() + " " + oldCar.getModel() + " was not found");
+            return false;
+        }
+        this.carLinkedList.set(foundPosition, newCar);
+        System.out.println(oldCar.getManufacturer() + " " + oldCar.getModel() + " was replaced with " + newCar.getManufacturer() + " " + newCar.getModel());
         return true;
     }
 
-    //modifyItem method based on a new Car object.
-    //Call the modifyItem method based on an index and new Car object.
-    public void modifyItem(Car newCar) {
+    //updateItem method based on a new Car object.
+    //Call the updateItem method based on an index and new Car object.
+    public void updateItem(Car newCar) {
         int position = findItem(newCar, carLinkedList);
         if (position >= 0) {
-            modifyItem(position, newCar);
+            updateItem(position, newCar);
         }
     }
 
-    //modifyItem method based on an index and new Car object.
-    public void modifyItem(int index, Car newCar) {
+    //updateItem method based on an index and new Car object.
+    public void updateItem(int index, Car newCar) {
         carLinkedList.set(index, newCar);
         int position = index + 1;
         System.out.println("Car index " + position + " has been modified with new Model: " + getItem(index).getModel() + " and Manufacturer: " + getItem(index).getManufacturer());
@@ -63,15 +78,16 @@ public class CarList {
     }
 
     //removeItem method removes a car object from list based on it's index
-    public void removeItem(int position) {
+    private void removeItem(int position) {
         Car carToRemove = carLinkedList.get(position);
         carLinkedList.remove(carToRemove);
     }
 
-    public void populateListWithObjects() {
+    public void populateListWithHardcodedObjects() {
         this.carLinkedList.add(new Car("Dacia", "1310"));
         this.carLinkedList.add(new Car("Dacia", "Dokker VAN"));
         this.carLinkedList.add(new Car("Dacia", "New Sandero"));
+        System.out.println("Added hardcoded values to car list");
     }
 
     private Car getItem(int index) {
@@ -86,6 +102,7 @@ public class CarList {
         }
     }
 
+    //Overloaded methods: findItem
     //public method to find item and return a Car object. Accessed from outside class
     public Car findItem(Car searchedCar) {
         boolean exists = carLinkedList.contains(searchedCar);
@@ -99,10 +116,30 @@ public class CarList {
         return carLinkedList.get(position);
     }
 
-    //public method to find item and return it's index. Accessed from outside class
-    public int findItem(Car searchedCar, List list) {
+    /* private method, accessed within the class, to find an item and return an integer:
+     Params: The object attribute, and the list we're looking the item
+     - -1 if does not exist on the list
+     - 0 or 1 - if exist
+      */
+    private int findItem(String carManufacturerToBeSearched) {
+        for (int i = 0; i < this.carLinkedList.size(); i++) {
+            Car car = this.carLinkedList.get(i); //create a new object
+            if (car.getManufacturer().equals(carManufacturerToBeSearched)) {
+                return i; //return the position in the List when the item is found
+            }
+        }
+        return -1; //when the item is not found
+    }
+
+    /* private method, accessed within the class, to find an item and return an integer:
+    Params: The car object, and the list we're looking the item
+    - -1 if does not exist on the list
+    - 0 or 1 - if exist
+     */
+    private int findItem(Car searchedCar, List list) {
         return list.indexOf(searchedCar);
     }
+
 
 }
 

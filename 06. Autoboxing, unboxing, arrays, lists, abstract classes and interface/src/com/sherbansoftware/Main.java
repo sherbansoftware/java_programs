@@ -7,6 +7,7 @@ import java.util.Scanner;
  * Eg. array of characters, array of integer, array of String, array of SomeObject
  */
 public class Main {
+    //define a List of cars which has it s size allocated dynamically
     private static CarList carList = new CarList();
     private static Scanner scanner = new Scanner(System.in);
 
@@ -20,38 +21,45 @@ public class Main {
     }
 
     //private static methods from the switch statement
+    private static void populateListWithHardcodedData() {
+        carList.populateListWithHardcodedObjects();
+    }
+
     private static void listItems() {
         carList.listItems(carList.getCarLinkedList());
     }
 
-    private static void addItem() {
-        System.out.print("Enter a car manufacturer: ");
+    private static void addData() {
+        System.out.print("Enter a car manufacturer to be added: ");
         String carManufacturer = scanner.nextLine();
-        System.out.print("Enter a car model: ");
+        System.out.print("Enter a car model to be added: ");
         String carModel = scanner.nextLine();
         Car carToBeAdded = new Car(carManufacturer, carModel);
         carList.addNewItem(carToBeAdded);
     }
 
-    private static void modifyItem() {
-        System.out.print("Enter item number: ");
-        int itemNo = scanner.nextInt();
-        scanner.nextLine();
+    private static void updateData() {
+//        System.out.print("Enter item number to be modified: ");
+//        int itemNo = scanner.nextInt();
+//        scanner.nextLine();
 
-        Car carToBeModified = new Car("Manufacturer to be modified", "Model to be modified");
+        //Car carToBeModified = new Car("Manufacturer to be modified", "Model to be modified");
         //Note that for the user should not use an index to access particular elements in order to modify a car item. Just as example.
-        carList.modifyItem(itemNo - 1, carToBeModified);  // //call to modify a car based on it's index
-        System.out.println();
-        carList.modifyItem(new Car("Dacia", "Berlina")); //call to modify a specific car
+        //carList.updateItem(itemNo - 1, carToBeModified);  // //call to modify a car based on it's index
+        // System.out.println();
+        //carList.updateItem(new Car("Dacia", "Berlina")); //call to modify a specific car
+        Car oldCar = new Car("Dacia", "1310");
+        Car newCar = new Car("Daciaxx", "Berlinaxxx");
+        carList.updateItem(oldCar, newCar);
     }
 
-    private static void removeItem() {
-        System.out.print("Enter item number: ");
-        int itemNo = scanner.nextInt();
-        scanner.nextLine();
+    private static void removeData() {
+        System.out.print("Enter a car manufacturer to be deleted: ");
+        String carManufacturerToBeDeleted = scanner.nextLine();
+        System.out.print("Enter a car model to be deleted: ");
+        String carModelToBeDeleted = scanner.nextLine();
         //Note that for the user should not use an index to access particular elements in order to remove a car item. Just as example.
-        carList.removeItem(itemNo - 1); //call to remove a car based on it's index
-        carList.removeItem(new Car("Dacia", "Berlina"));  //call to remove a specific car
+        //carList.removeItem(carManufacturerToBeDeleted, carModelToBeDeleted));  //call to remove a specific car
 
     }
 
@@ -68,15 +76,16 @@ public class Main {
         }
     }
 
-    private static void printinstructions() {
+    private static void printInstructions() {
         System.out.println("\nPress ");
         System.out.println("\t 0 - To print choice options.");
-        System.out.println("\t 1 - To print the list of car items.");
-        System.out.println("\t 2 - To add a car item to the list.");
-        System.out.println("\t 3 - To modify a car item in the list.");
-        System.out.println("\t 4 - To remove a car item from the list.");
-        System.out.println("\t 5 - To search for a car item in the car list.");
-        System.out.println("\t 6 - To quit the application.");
+        System.out.println("\t 1 - To print the list of car items within the list.");
+        System.out.println("\t 2 - To populate list with hardcoded data.");
+        System.out.println("\t 3 - To add a new car item to the list.");
+        System.out.println("\t 4 - To update an existing car item in the list.");
+        System.out.println("\t 5 - To delete a car item from the list.");
+        System.out.println("\t 6 - To search for a car item in the list.");
+        System.out.println("\t 7 - To quit the application.");
     }
 
     //Entry point for JVM
@@ -114,31 +123,9 @@ public class Main {
         double average = getAvgOfArrElements(arrayOfInt);
         System.out.println("The average is: " + average);
 
-        //define a List of cars which has it s size allocated dynamically
-        carList.addNewItem(new Car("Dacia", "1310"));
-        carList.addNewItem(new Car("Dacia", "Sandero"));
-        carList.addNewItem(new Car("Dacia", "Logan"));
-        carList.addNewItem(new Car("Dacia", "Logan MCV"));
-        Car findCar = new Car("Dacia", "Dokker");
-        carList.addNewItem(findCar);
-        carList.addNewItem(new Car("Dacia", "Lodgy"));
-
-
-        carList.modifyItem(0, new Car("Dacia", "Berlina"));
-
-        carList.findItem(findCar);
-
-        carList.listItems(carList.getCarLinkedList());
-
-        carList.populateListWithObjects();
-
-        carList.removeItem(3);
-
-        carList.listItems(carList.getCarLinkedList());
-
         boolean quit = false;
-        int choice = 0;
-        printinstructions();
+        int choice;
+        printInstructions();
 
         while (!quit) {
             System.out.println("Enter your choice");
@@ -147,24 +134,27 @@ public class Main {
 
             switch (choice) {
                 case 0:
-                    printinstructions();
+                    printInstructions();
                     break;
                 case 1:
                     listItems();
                     break;
                 case 2:
-                    addItem();
+                    populateListWithHardcodedData();
                     break;
                 case 3:
-                    modifyItem();
+                    addData();
                     break;
                 case 4:
-                    removeItem();
+                    updateData();
                     break;
                 case 5:
-                    searchForItem();
+                    removeData();
                     break;
                 case 6:
+                    searchForItem();
+                    break;
+                case 7:
                     System.out.println("Exit switch!");
                     quit = true;
                     break;
