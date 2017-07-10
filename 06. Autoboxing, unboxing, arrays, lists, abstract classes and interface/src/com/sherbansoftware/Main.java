@@ -27,6 +27,7 @@ public class Main {
 
     private static void listItems() {
         carList.listItems(carList.getCarLinkedList());
+        carList.listCollectionItems(carList.getCarLinkedList());
     }
 
     private static void addData() {
@@ -60,8 +61,9 @@ public class Main {
         String carModelToBeDeleted = scanner.nextLine();
         //Note that for the user should not use an index to access particular elements in order to remove a car item. Just as example.
         //carList.removeItem(carManufacturerToBeDeleted, carModelToBeDeleted));  //call to remove a specific car
-
+        carList.removeItem(carList.getCarLinkedList(), 1, 3);
     }
+
 
     private static void searchForItem() {
         System.out.print("Enter a car manufacturer to be searched: ");

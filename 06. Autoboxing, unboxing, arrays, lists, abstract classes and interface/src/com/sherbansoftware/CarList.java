@@ -1,5 +1,6 @@
 package com.sherbansoftware;
 
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -68,6 +69,11 @@ public class CarList {
         System.out.println("Car index " + position + " has been modified with new Model: " + getItem(index).getModel() + " and Manufacturer: " + getItem(index).getManufacturer());
     }
 
+    //removeItem method removes a car object from a List based on start and end position
+    public void removeItem(List<Car> list, int startPosition, int endPosition) {
+        list.subList(startPosition, endPosition).clear(); //remove items
+    }
+
     //removeItem method removes the car object parsed as parameter from list.
     // Call the removeItem method that removes a car object from list based on it's index
     public void removeItem(Car carToBeRemoved) {
@@ -102,6 +108,16 @@ public class CarList {
         }
     }
 
+    public void listCollectionItems(Collection<Car> collection) {
+        System.out.println("The list object contains " + collection.size() + " car objects");
+        //Traversing list through for each statement
+        int i = 0;
+        for (Car car : collection) {
+            System.out.println("\t Car: " + (i + 1) + " - Manufacturer: " + car.getManufacturer() + ". Model: " + car.getModel());
+            i++;
+        }
+    }
+
     //Overloaded methods: findItem
     //public method to find item and return a Car object. Accessed from outside class
     public Car findItem(Car searchedCar) {
@@ -129,6 +145,17 @@ public class CarList {
             }
         }
         return -1; //when the item is not found
+    }
+
+    /* private method, accessed within the class, to find an item and return a Car object:
+  */
+    private Car findItemReturnCar(String carManufacturerToBeSearched) {
+        for (Car searchedItem : this.carLinkedList) {
+            if (searchedItem.getManufacturer().equals(carManufacturerToBeSearched)) {
+                return searchedItem; //return the searchedItem
+            }
+        }
+        return null; //when the item is not found
     }
 
     /* private method, accessed within the class, to find an item and return an integer:
