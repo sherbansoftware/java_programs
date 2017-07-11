@@ -78,6 +78,14 @@ public class Main {
         }
     }
 
+    private static void boxingAndUnboxing(){
+        Integer[] integerArray = new Integer[5]; // create integerArray
+        integerArray[0] = 10; // assign Integer 10 to integerArray[0]
+        int value = integerArray[0]; // get int value of Integer
+        System.out.println(integerArray.getClass());
+        System.out.println(value);
+    }
+
     private static void printInstructions() {
         System.out.println("\nPress ");
         System.out.println("\t 0 - To print choice options.");

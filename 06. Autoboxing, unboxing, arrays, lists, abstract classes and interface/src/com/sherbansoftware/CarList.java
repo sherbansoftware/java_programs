@@ -1,6 +1,7 @@
 package com.sherbansoftware;
 
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -153,6 +154,17 @@ public class CarList {
         for (Car searchedItem : this.carLinkedList) {
             if (searchedItem.getManufacturer().equals(carManufacturerToBeSearched)) {
                 return searchedItem; //return the searchedItem
+            }
+        }
+        return null; //when the item is not found
+    }
+
+    private Car findItemReturnCarInCollection(Car carToFind, Collection<Car> carCollection) {
+        Iterator<Car> iterator = carCollection.iterator();
+
+        while (iterator.hasNext()) {
+            if (carCollection.contains(carToFind)) {
+                return carToFind;
             }
         }
         return null; //when the item is not found
