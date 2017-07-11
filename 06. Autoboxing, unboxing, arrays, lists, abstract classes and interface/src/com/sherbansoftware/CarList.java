@@ -1,9 +1,6 @@
 package com.sherbansoftware;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Mihai Serban on 6/22/2017.
@@ -159,8 +156,9 @@ public class CarList {
         return null; //when the item is not found
     }
 
+
     private Car findItemReturnCarInCollection(Car carToFind, Collection<Car> carCollection) {
-        Iterator<Car> iterator = carCollection.iterator();
+        Iterator<Car> iterator = carCollection.iterator();    //better with ArrayList not LinkedList
 
         while (iterator.hasNext()) {
             if (carCollection.contains(carToFind)) {
@@ -168,6 +166,15 @@ public class CarList {
             }
         }
         return null; //when the item is not found
+    }
+
+    private void findItemReturnCarInCollection(Car carToFind, List<Car> carLinkedListli) {
+        ListIterator<Car> iterator = carLinkedList.listIterator();    //better with ArrayList not LinkedList
+
+        while (iterator.hasNext()) {
+            Car nextCar = iterator.next();
+            iterator.set(nextCar);
+        }
     }
 
     /* private method, accessed within the class, to find an item and return an integer:
