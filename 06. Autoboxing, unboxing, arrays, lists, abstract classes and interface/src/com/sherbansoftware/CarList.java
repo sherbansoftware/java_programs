@@ -25,6 +25,48 @@ public class CarList {
         return carLinkedList;
     }
 
+    //getter for Car item
+    private Car getItem(int index) {
+        return carLinkedList.get(index);
+    }
+
+    //populate List With Hardcoded Objects
+    public void populateListWithHardcodedObjects() {
+        this.carLinkedList.add(new Car("Dacia", "1310"));
+        this.carLinkedList.add(new Car("Dacia", "Dokker VAN"));
+        this.carLinkedList.add(new Car("Dacia", "New Sandero"));
+        System.out.println("Added hardcoded values to car list");
+    }
+
+    //list Items
+    public void listItems(Collection<Car> collectionOfCars) {
+        System.out.println("The list object contains " + collectionOfCars.size() + " car objects");
+
+        //Traversing list through for
+        for (int i = 0; i < collectionOfCars.size(); i++) {
+            System.out.println("\t Car: " + (i + 1) + " - Manufacturer: " + getCarLinkedList().get(i).getManufacturer() + ". Model: " + getCarLinkedList().get(i).getModel());
+        }
+
+        //Traversing list through Iterator
+        Iterator<Car> iterator = collectionOfCars.iterator();
+        while (iterator.hasNext()) {
+            Car car = iterator.next();
+            System.out.println("Car: " + car);
+        }
+
+        //Traversing list through for each
+        for (Car car : collectionOfCars) {
+            System.out.println("Car: " + car);
+        }
+
+        //Traversing list through for each with index
+        int i = 0;
+        for (Car car : collectionOfCars) {
+            System.out.println("\t Car: " + (i + 1) + " - Manufacturer: " + car.getManufacturer() + ". Model: " + car.getModel());
+            i++;
+        }
+    }
+
     //add a car object to list and return true if the item has added or false otherwise
     public boolean addNewItem(Car newCar) {
         if (findItem(newCar.getManufacturer()) >= 0) {
@@ -36,6 +78,15 @@ public class CarList {
         System.out.println("The new car object count is: " + carLinkedList.size());
         System.out.println("\t Added: " + newCar.getManufacturer() + " " + newCar.getModel());
         return true; //successfully added the item
+    }
+
+    // add new Car with all the car attributes
+    public boolean addNewItem(String manufacturer, String model) {
+        if (findItem(manufacturer, model) == null) {
+            this.carLinkedList.add(new Car(manufacturer, model));
+            return true;
+        }
+        return false;
     }
 
     //Overload updateItem
@@ -81,39 +132,19 @@ public class CarList {
         }
     }
 
+    // add new Car with all the car attributes
+    public boolean removeItem(String manufacturer, String model) {
+        if (findItem(manufacturer, model) != null) {
+            this.carLinkedList.remove(new Car(manufacturer, model));
+            return true;
+        }
+        return false;
+    }
+
     //removeItem method removes a car object from list based on it's index
     private void removeItem(int position) {
         Car carToRemove = carLinkedList.get(position);
         carLinkedList.remove(carToRemove);
-    }
-
-    public void populateListWithHardcodedObjects() {
-        this.carLinkedList.add(new Car("Dacia", "1310"));
-        this.carLinkedList.add(new Car("Dacia", "Dokker VAN"));
-        this.carLinkedList.add(new Car("Dacia", "New Sandero"));
-        System.out.println("Added hardcoded values to car list");
-    }
-
-    private Car getItem(int index) {
-        return carLinkedList.get(index);
-    }
-
-    public void listItems(List list) {
-        System.out.println("The list object contains " + list.size() + " car objects");
-        //Traversing list through for
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println("\t Car: " + (i + 1) + " - Manufacturer: " + getCarLinkedList().get(i).getManufacturer() + ". Model: " + getCarLinkedList().get(i).getModel());
-        }
-    }
-
-    public void listCollectionItems(Collection<Car> collection) {
-        System.out.println("The list object contains " + collection.size() + " car objects");
-        //Traversing list through for each statement
-        int i = 0;
-        for (Car car : collection) {
-            System.out.println("\t Car: " + (i + 1) + " - Manufacturer: " + car.getManufacturer() + ". Model: " + car.getModel());
-            i++;
-        }
     }
 
     //Overloaded methods: findItem
@@ -145,6 +176,19 @@ public class CarList {
         return -1; //when the item is not found
     }
 
+    /* private method, accessed within the class, to find an item and return a Car:
+     Params: The object attribute, and the list we're looking the item
+     - alternative to previous method
+      */
+    private Car findItem(String manufacturer, String model) {
+        for (Car checkedCar : carLinkedList) {
+            if (checkedCar.getManufacturer().equals(manufacturer) && checkedCar.getModel().equals(model)) {
+                return checkedCar;
+            }
+        }
+        return null;
+    }
+
     /* private method, accessed within the class, to find an item and return a Car object:
   */
     private Car findItemReturnCar(String carManufacturerToBeSearched) {
@@ -155,7 +199,6 @@ public class CarList {
         }
         return null; //when the item is not found
     }
-
 
     private Car findItemReturnCarInCollection(Car carToFind, Collection<Car> carCollection) {
         Iterator<Car> iterator = carCollection.iterator();    //better with ArrayList not LinkedList
@@ -173,7 +216,7 @@ public class CarList {
 
         while (iterator.hasNext()) {
             Car nextCar = iterator.next();
-            iterator.set(nextCar);
+            iterator.set(carToFind);
         }
     }
 

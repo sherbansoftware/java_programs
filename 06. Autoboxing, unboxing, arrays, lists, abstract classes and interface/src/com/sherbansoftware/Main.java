@@ -1,5 +1,6 @@
 package com.sherbansoftware;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -26,8 +27,8 @@ public class Main {
     }
 
     private static void listItems() {
+        //list Collection Items
         carList.listItems(carList.getCarLinkedList());
-        carList.listCollectionItems(carList.getCarLinkedList());
     }
 
     private static void addData() {
@@ -36,7 +37,8 @@ public class Main {
         System.out.print("Enter a car model to be added: ");
         String carModel = scanner.nextLine();
         Car carToBeAdded = new Car(carManufacturer, carModel);
-        carList.addNewItem(carToBeAdded);
+        carList.addNewItem(carToBeAdded); //one way
+        carList.addNewItem(carManufacturer, carModel); //second way
     }
 
     private static void updateData() {
@@ -60,8 +62,8 @@ public class Main {
         System.out.print("Enter a car model to be deleted: ");
         String carModelToBeDeleted = scanner.nextLine();
         //Note that for the user should not use an index to access particular elements in order to remove a car item. Just as example.
-        //carList.removeItem(carManufacturerToBeDeleted, carModelToBeDeleted));  //call to remove a specific car
-        carList.removeItem(carList.getCarLinkedList(), 1, 3);
+        carList.removeItem(carManufacturerToBeDeleted, carModelToBeDeleted);  //call to remove a specific car
+        //carList.removeItem(carList.getCarLinkedList(), 1, 3); //call to remove specific indexes
     }
 
 
@@ -78,7 +80,7 @@ public class Main {
         }
     }
 
-    private static void boxingAndUnboxing(){
+    private static void boxingAndUnboxing() {
         Integer[] integerArray = new Integer[5]; // create integerArray
         integerArray[0] = 10; // assign Integer 10 to integerArray[0]
         int value = integerArray[0]; // get int value of Integer
@@ -134,12 +136,18 @@ public class Main {
         System.out.println("The average is: " + average);
 
         boolean quit = false;
-        int choice;
+        int choice = 0;
         printInstructions();
 
         while (!quit) {
             System.out.println("Enter your choice");
-            choice = scanner.nextInt();
+
+            try {
+                choice = scanner.nextInt();
+            } catch (InputMismatchException e) {
+                e = new InputMismatchException("Incorrect option. Press 0 to print choice options");
+                System.out.println(e.getMessage());
+            }
             scanner.nextLine(); //clear the input buffer
 
             switch (choice) {
