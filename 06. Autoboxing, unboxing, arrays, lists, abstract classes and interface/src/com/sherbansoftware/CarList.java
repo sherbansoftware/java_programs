@@ -69,7 +69,7 @@ public class CarList {
 
     //add a car object to list and return true if the item has added or false otherwise
     public boolean addNewItem(Car newCar) {
-        if (findItem(newCar.getManufacturer()) >= 0) {
+        if (findItem(newCar.getManufacturer(), this.carLinkedList) >= 0) {
             System.out.println("The car: " + newCar.getManufacturer() + " " + newCar.getModel() + " is already on list");
             return false;
         }
@@ -166,14 +166,32 @@ public class CarList {
      - -1 if does not exist on the list
      - 0 or 1 - if exist
       */
-    private int findItem(String carManufacturerToBeSearched) {
-        for (int i = 0; i < this.carLinkedList.size(); i++) {
-            Car car = this.carLinkedList.get(i); //create a new object
-            if (car.getManufacturer().equals(carManufacturerToBeSearched)) {
+    private int findItem(String carManufacturerToBeSearched, List<Car> list) {
+        carManufacturerToBeSearched = carManufacturerToBeSearched.trim();
+
+        for (int i = 0; i < list.size(); i++) {
+            Car car = list.get(i); //create a new object
+            if (car.getManufacturer().equalsIgnoreCase(carManufacturerToBeSearched)) {
                 return i; //return the position in the List when the item is found
             }
         }
         return -1; //when the item is not found
+    }
+
+    /* private method, accessed within the class, to find an item and return an integer:
+ Params: The object attribute, and the list we're looking the item
+ - -1 if does not exist on the list
+ - 0 or 1 - if exist
+  */
+    private Car findCarItem(String carManufacturerToBeSearched, List<Car> list) throws CarNotFoundException {
+        carManufacturerToBeSearched = carManufacturerToBeSearched.trim();
+
+        for (Car car : list) {
+            if (car.getManufacturer().equalsIgnoreCase(carManufacturerToBeSearched)) {
+                return car;
+            }
+        }
+        throw new CarNotFoundException("Car not found!!");
     }
 
     /* private method, accessed within the class, to find an item and return a Car:
@@ -193,7 +211,7 @@ public class CarList {
   */
     private Car findItemReturnCar(String carManufacturerToBeSearched) {
         for (Car searchedItem : this.carLinkedList) {
-            if (searchedItem.getManufacturer().equals(carManufacturerToBeSearched)) {
+            if (searchedItem.getManufacturer().equalsIgnoreCase(carManufacturerToBeSearched)) {
                 return searchedItem; //return the searchedItem
             }
         }
