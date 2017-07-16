@@ -1,6 +1,7 @@
 package com.sherbansoftware;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by Mihai Serban on 6/22/2017.
@@ -248,5 +249,12 @@ public class CarList {
     }
 
 
+    public void searchForItem(String carManufacturer, String carModel) {
+        List<Car> result = getCarLinkedList().stream()
+                .filter(item -> (item.getManufacturer().equals(carManufacturer) && item.getModel().equals(carModel)))
+                .collect(Collectors.toList());
+
+        System.out.println("Result size: " + result.size());
+    }
 }
 

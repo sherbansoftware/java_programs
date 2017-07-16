@@ -72,12 +72,9 @@ public class Main {
         String carManufacturer = scanner.nextLine();
         System.out.print("Enter a car model to be searched: ");
         String carModel = scanner.nextLine();
-        Car searchedCar = new Car(carManufacturer, carModel);
-        if (carList.findItem(searchedCar) != null) {
-            System.out.println("Found " + searchedCar.getManufacturer() + " " + searchedCar.getModel() + " in  our car list" + " at position: " + carList.getCarLinkedList().indexOf(searchedCar));
-        } else {
-            System.out.println(searchedCar.getManufacturer() + " " + searchedCar.getModel() + " is not in the car list");
-        }
+
+        carList.searchForItem(carManufacturer, carModel);
+
     }
 
     private static void boxingAndUnboxing() {
