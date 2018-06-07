@@ -26,7 +26,7 @@ public class Main {
         farm.addAnimal(cat);
         farm.addAnimal(dog);
 
-        System.out.println("Size of farm is: " + farm.farmMembersNumber());
+        System.out.println("Size of farm is: " + farm.getFarmMembersNumber());
 
         //ensure only cats are added to farm using generics without duplicating code
         Cat firstCat = new Cat("first cat");
@@ -45,6 +45,7 @@ public class Main {
         farm2.addAnimal(secondDog);
 
         System.out.println("Ranking");
+        farm.showFarmTable();
         System.out.println(farm.getFarmName() + " : " + farm.ranking() + " points");
         System.out.println(farm1.getFarmName() + " : " + farm1.ranking() + " points");
         System.out.println(farm2.getFarmName() + " : " + farm2.ranking() + " points");

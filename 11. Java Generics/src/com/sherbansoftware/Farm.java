@@ -2,6 +2,7 @@ package com.sherbansoftware;
 // simulating the animals fighting on a farm
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Farm<T extends Animal & IAnimal> implements Comparable<Farm<T>> {
@@ -10,10 +11,6 @@ public class Farm<T extends Animal & IAnimal> implements Comparable<Farm<T>> {
     int won = 0;
     int lost = 0;
     int tied = 0;
-
-    public List<T> getFarmMembers() {
-        return farmMembers;
-    }
 
     private List<T> farmMembers = new ArrayList<>();
 
@@ -37,7 +34,14 @@ public class Farm<T extends Animal & IAnimal> implements Comparable<Farm<T>> {
         }
     }
 
-    public int farmMembersNumber() {
+    public void showFarmTable(){
+        //Collections.sort(farmMembers);
+
+        for (T t : farmMembers)
+            System.out.println(" Animal name: " + t.getName() + " ranking: " + this.ranking() );
+    }
+
+    public int getFarmMembersNumber() {
         return this.farmMembers.size();
     }
 
