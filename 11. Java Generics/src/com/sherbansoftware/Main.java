@@ -1,6 +1,7 @@
 package com.sherbansoftware;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -43,7 +44,14 @@ public class Main {
         farm2.addAnimal(firstDog);
         farm2.addAnimal(secondDog);
 
-        farm1.checkLifeStatus(farm2, 3, 7);
+        System.out.println("Ranking");
+        System.out.println(farm.getFarmName() + " : " + farm.ranking() + " points");
+        System.out.println(farm1.getFarmName() + " : " + farm1.ranking() + " points");
+        System.out.println(farm2.getFarmName() + " : " + farm2.ranking() + " points");
+
+        //compare to farms
+        System.out.println(farm.compareTo(farm2));
+        System.out.println(farm.compareTo(farm1));
     }
 
     private static void printDoubles(List<Integer> list) {

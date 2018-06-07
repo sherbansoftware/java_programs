@@ -4,12 +4,16 @@ package com.sherbansoftware;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Farm<T extends Animal & IAnimal> {
+public class Farm<T extends Animal & IAnimal> implements Comparable<Farm<T>> {
     private String farmName;
     int played = 0;
     int won = 0;
     int lost = 0;
     int tied = 0;
+
+    public List<T> getFarmMembers() {
+        return farmMembers;
+    }
 
     private List<T> farmMembers = new ArrayList<>();
 
@@ -21,7 +25,7 @@ public class Farm<T extends Animal & IAnimal> {
         return farmName;
     }
 
-    public boolean addAnimal(T animal ) {
+    public boolean addAnimal(T animal) {
         if (farmMembers.contains(animal)) {
             //redundant casting because of generic extend class
             System.out.println("Animal: " + ((Animal) animal).getName() + " is already in farm");
@@ -37,21 +41,39 @@ public class Farm<T extends Animal & IAnimal> {
         return this.farmMembers.size();
     }
 
-    public void checkLifeStatus(Farm opponent, int ourScore, int theirScore) {
+    public String checkLifeStatus(Farm<T> opponent, int ourScore, int theirScore) {
+        String message;
         if (ourScore > theirScore) {
             won++;
+            message = "won";
         } else if (ourScore < theirScore) {
             lost++;
+            message = "lost";
         } else {
             tied++;
+            message = "tied";
         }
         played++;
         if (opponent != null) {
+            System.out.println(this.getFarmName() + " " + message + " " + opponent.getFarmName());
             opponent.checkLifeStatus(null, theirScore, ourScore);
         }
+
+        return message;
     }
 
     public int ranking() {
         return (won * 2) + tied;
+    }
+
+    @Override
+    public int compareTo(Farm<T> farm) {
+        if (this.ranking() > farm.ranking()) {
+            return -1;
+        } else if (this.ranking() < farm.ranking()) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }
