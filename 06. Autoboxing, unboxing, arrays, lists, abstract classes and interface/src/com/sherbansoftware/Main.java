@@ -1,6 +1,8 @@
 package com.sherbansoftware;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -8,6 +10,8 @@ import java.util.Scanner;
  * Eg. array of characters, array of integer, array of String, array of SomeObject
  */
 public class Main {
+    private final static String TAG = Main.class.getSimpleName();
+
     //define a List of cars which has it s size allocated dynamically
     private static CarList carList = new CarList();
     private static Scanner scanner = new Scanner(System.in);
@@ -99,6 +103,9 @@ public class Main {
 
     //Entry point for JVM
     public static void main(String[] args) {
+        //do Grocery Stuff
+        doGroceryStuff();
+
         int[] arrayOfInt = new int[5];//declaration and instantiation, space for 5 elements. [] may be after or before variable name.
         arrayOfInt[0] = 5; //initialization of first element
         arrayOfInt[1] = 20;
@@ -175,5 +182,110 @@ public class Main {
                     break;
             }
         }
+    }
+
+    public static void initializeArray(int[] arr) {
+        System.out.println(TAG + " initializeArray");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] += i * 20;
+            System.out.println("Element " + i + " value is: " + arr[i]);
+        }
+    }
+
+    public static void printArray(int[] arr) {
+        System.out.println(TAG + " printArray");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("Element " + i + " value is: " + arr[i]);
+        }
+    }
+
+    public static double getAverage(int[] arr) {
+        System.out.println(TAG + " getAverage");
+        int sum = 0;
+        for (int i : arr) {
+            sum += i;
+        }
+        System.out.println("Sum is: " + sum);
+        return (double) sum / (double) arr.length;
+    }
+
+    public static int[] sortArrayIntegers(int[] arr) {
+        System.out.println(TAG + " sortArrayIntegers");
+        int[] sortedArray = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            sortedArray[i] = arr[i];
+        }
+
+        boolean flag = true;
+        int temp;
+
+        while (flag) {
+            flag = false;
+            for (int i = 0; i < sortedArray.length - 1; i++) {
+                if (sortedArray[i] < sortedArray[i + 1]) {
+                    temp = sortedArray[i];
+                    sortedArray[i] = sortedArray[i + 1];
+                    sortedArray[i + 1] = temp;
+                    flag = true;
+                }
+            }
+        }
+        return sortedArray;
+    }
+
+    public static int[] sortArrayIntegersUsingCopyOf(int[] arr) {
+        System.out.println(TAG + " sortArrayIntegersUsingCopyOf");
+        int[] sortedArray = Arrays.copyOf(arr, arr.length);
+
+        boolean flag = true;
+        int temp;
+
+        while (flag) {
+            flag = false;
+            for (int i = 0; i < sortedArray.length - 1; i++) {
+                if (sortedArray[i] > sortedArray[i + 1]) {
+                    temp = sortedArray[i];
+                    sortedArray[i] = sortedArray[i + 1];
+                    sortedArray[i + 1] = temp;
+                    flag = true;
+                }
+            }
+        }
+        return sortedArray;
+    }
+
+    private static int[] resizeArray(int[] arr, int length) {
+        int[] originalArr = arr;
+        arr = new int[length];
+        for (int i = 0; i < originalArr.length; i++) {
+            arr[i] = originalArr[i];
+        }
+        return arr;
+    }
+
+    public static void doGroceryStuff() {
+        int[] myArrayVariables = new int[3];
+        printArray(myArrayVariables);
+        initializeArray(myArrayVariables);
+        double avg = getAverage(myArrayVariables);
+        System.out.println("AVG is: " + avg);
+        int[] sortedIntegers = sortArrayIntegers(myArrayVariables);
+        printArray(sortedIntegers);
+        sortedIntegers = sortArrayIntegersUsingCopyOf(myArrayVariables);
+        printArray(sortedIntegers);
+        int[] resizedArr = resizeArray(myArrayVariables, 5);
+        printArray(resizedArr);
+
+        GroceryList groceryList = new GroceryList();
+        List listOfItems = groceryList.getGroceryList();
+        groceryList.addItem(listOfItems, "Apples");
+        groceryList.addItem(listOfItems, "Bread");
+        groceryList.addItem(listOfItems, "Cakes");
+        groceryList.printList(listOfItems);
+        List newListOfItems = groceryList.modifyItem(listOfItems, 0, "Kiwis");
+        groceryList.printList(newListOfItems);
+        newListOfItems = groceryList.removeItem(newListOfItems, 0);
+        groceryList.printList(newListOfItems);
+        System.out.println(groceryList.findItem("Bread").toUpperCase());
     }
 }
