@@ -1,8 +1,13 @@
 package com.sherbansoftware;
 
-public class Vehicle {
+/*
+- can contain non abstract methods
+- can contain member variables also
+- must use the abstract keyword to make a method abstract
+ */
+public abstract class Vehicle implements IVehicle {
     private String name;
-    private Engine engine;
+    private Engine engine;  //composition has-a relationship
     private Door door;
 
     public Vehicle(String name, Engine engine, Door door) {

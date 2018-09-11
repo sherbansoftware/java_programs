@@ -1,6 +1,6 @@
 package com.sherbansoftware;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle {  //is-a relationship
     private int wheels;
 
     public Car(String name, Engine engine, Door door, int wheels) {

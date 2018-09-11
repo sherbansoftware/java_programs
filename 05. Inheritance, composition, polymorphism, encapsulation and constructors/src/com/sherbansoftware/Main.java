@@ -10,6 +10,8 @@ public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
         //simulate Mihai Serban's bedroom
         Room bedroom = new Room("Mihai Serban", new Tv());
+        String tv = bedroom.getName();
+        System.out.println("TV is: " + tv);
 
         //Inside main method we define an original TV object based on a class (template for creating Java objects).
         Tv samsung = new Tv(new Screen("LCD"));
@@ -46,5 +48,19 @@ public class Main {
         samsungCloned.setScreen(fullHd);
         System.out.println("Samsung cloned object has a screen with a new type of screen: " + samsungCloned.getScreen().getType() + " ");
         samsungCloned.turnOff();
+
+        Engine engine = new Engine("AGH model", "Volkswagen", 1888);
+        Door door = new Door(4);
+        Car car = new Car("Golf 4", engine, door, 4);
+        car.startVehicle();
+        car.stopVehicle();
+
+        try {
+            boolean value = Vehicle.checkType(car, "com.sherbansoftware.Car");
+            System.out.println("value is: " + value);
+        } catch (ClassNotFoundException e) {
+            System.out.println(e.getMessage() + " " + e.getCause());
+        }
     }
+
 }

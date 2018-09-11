@@ -4,7 +4,7 @@ package com.sherbansoftware;
  * Created by Mihai Serban on 6/18/2017.
  * Generic class Device
  */
-public class Device {
+public class Device implements IPolymorphicDevice {
     private String internalProcessor;
     private String powerStatus;
 
@@ -13,6 +13,7 @@ public class Device {
         this.powerStatus = powerStatus;
     }
 
+    @Override
     public String showPolymorphism(){
         return getClass().toString();
     }
