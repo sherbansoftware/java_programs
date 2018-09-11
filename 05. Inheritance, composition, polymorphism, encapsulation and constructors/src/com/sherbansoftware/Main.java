@@ -55,6 +55,7 @@ public class Main {
         car.startVehicle();
         car.stopVehicle();
 
+        //handle checkType
         try {
             boolean value = Vehicle.checkType(car, "com.sherbansoftware.Car");
             System.out.println("value is: " + value);
