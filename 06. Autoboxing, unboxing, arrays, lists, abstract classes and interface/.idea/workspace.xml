@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="30b91fc0-aa74-460a-9aa4-58217cfc0936" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/sherbansoftware/GroceryList.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/com/sherbansoftware/Main.java" afterPath="$PROJECT_DIR$/src/com/sherbansoftware/Main.java" />
+      <change beforePath="$PROJECT_DIR$/../21. MVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../21. MVC/.idea/workspace.xml" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CarList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="258" column="1" lean-forward="false" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarNotFoundException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarNotFoundException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+              <folding>
+                <element signature="e#211#212#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Car.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GroceryList.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/GroceryList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#210#211#0" expanded="true" />
+                <element signature="e#244#245#0" expanded="true" />
+                <element signature="e#295#296#0" expanded="true" />
+                <element signature="e#325#326#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>pos</find>
+      <find>do</find>
+      <find>found</find>
+      <find>package com\.sherbansoftware\;\n\nimport java\.util\.Scanner\;\n\n\/\*\*\n \* Java array is an object the contains elements of similar data type\. It is a data structure where we store similar elements\. We can store only fixed set of elements in a java array\.\n \* Eg\. array of characters\, array of integer\, array of String\, array of SomeObject\n \*\/\npublic class Main \{\n    private static CarList carList \= new CarList\(\)\;\n    private static Scanner scanner \= new Scanner\(System\.in\)\;\n\n    \/\/ static method which return the average of array elements\n    private static double getAvgOfArrElements\(int\[\] arr\) \{\n        int sum \= 0\;\n        for \(int i \= 0\; i \&lt; arr\.length\; i\+\+\) \{\n            sum \+\= arr\[i\]\;\n        \}\n        return \(double\) sum \/ \(double\) arr\.length\;\n    \}\n\n    \/\/private static methods from the switch statement\n    private static void listItems\(\)\{\n        carList\.listItems\(carList\.getCarArrayList\(\)\)\;\n    \}\n\n    private static void addItem\(\) \{\n        carList\.addItem\(new Car\(\&quot;Car to be added\&quot;\, \&quot;Model to be added\&quot;\)\)\;\n    \}\n\n    private static void modifyItem\(\) \{\n        System\.out\.print\(\&quot;Enter item number\: \&quot;\)\;\n        int itemNo \= scanner\.nextInt\(\)\;\n        scanner\.nextLine\(\)\;\n        carList\.modifyItem\(itemNo \- 1\, new Car\(\&quot;Car to be modified\&quot;\, \&quot;Model to be modified\&quot;\)\)\;\n    \}\n\n    private static void removeItem\(\) \{\n        System\.out\.print\(\&quot;Enter item number\: \&quot;\)\;\n        int itemNo \= scanner\.nextInt\(\)\;\n        scanner\.nextLine\(\)\;\n        carList\.removeItem\(itemNo \- 1\)\;\n\n    \}\n\n    private static void searchForItem\(\) \{\n        Car searchedCar \= new Car\(\&quot;Dacia\&quot;\, \&quot;Berlina\&quot;\)\;\n        if \(carList\.findItem\(searchedCar\) \!\= null\) \{\n            System\.out\.println\(\&quot;Found \&quot; \+ searchedCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ searchedCar\.getModel\(\) \+ \&quot; in  our car list\&quot;\)\;\n        \} else \{\n            System\.out\.println\(searchedCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ searchedCar\.getModel\(\) \+ \&quot; is not in the car list\&quot;\)\;\n        \}\n    \}\n\n    private static void printinstructions\(\) \{\n        System\.out\.println\(\&quot;\\nPress \&quot;\)\;\n        System\.out\.println\(\&quot;\\t 0 \- To print choice options\.\&quot;\)\;\n        System\.out\.println\(\&quot;\\t 1 \- To print the list of car items\.\&quot;\)\;\n        System\.out\.println\(\&quot;\\t 2 \- To add a car item to the list\.\&quot;\)\;\n        System\.out\.println\(\&quot;\\t 3 \- To modify a car item in the list\.\&quot;\)\;\n        System\.out\.println\(\&quot;\\t 4 \- To remove a car item from the list\.\&quot;\)\;\n        System\.out\.println\(\&quot;\\t 5 \- To search for a car item in the car list\.\&quot;\)\;\n        System\.out\.println\(\&quot;\\t 6 \- To quit the application\.\&quot;\)\;\n    \}\n\n    \/\/Entry point for JVM\n    public static void main\(String\[\] args\) \{\n        int\[\] arrayOfInt \= new int\[5\]\;\/\/declaration and instantiation\, space for 5 elements\. \[\] may be after or before variable name\.\n        arrayOfInt\[0\] \= 5\; \/\/initialization of first element\n        arrayOfInt\[1\] \= 20\;\n        arrayOfInt\[2\] \= 80\;\n        arrayOfInt\[3\] \= 32\;\n        arrayOfInt\[4\] \= 43\; \/\/initialization of last element\n\n        \/\/reassign values to array elements\n        for \(int i \= 0\; i \&lt; arrayOfInt\.length\; i\+\+\) \{\n            arrayOfInt\[i\] \+\= 10\;\n        \}\n\n        \/\/list the new array elements with for each\n        System\.out\.println\(\&quot;list the new array elements with for each loop\&quot;\)\;\n        int count \= 0\;\n        for \(int i \: arrayOfInt\) \{\n            System\.out\.printf\(\&quot;arrayOfInt\[\&quot; \+ count \+ \&quot;\] \= \%10d\\n\&quot;\, i\)\; \/\/add 10 spaces before element value\n            count\+\+\;\n        \}\n        System\.out\.println\(\)\;\n        System\.out\.println\(\&quot;list the new array elements with while loop\&quot;\)\;\n\n        \/\/list the new array elements with while loop\n        count \= 0\;\n        while \(count \&lt; arrayOfInt\.length\) \{\n            System\.out\.printf\(\&quot;arrayOfInt\[\&quot; \+ count \+ \&quot;\] \= \%10d\\n\&quot;\, arrayOfInt\[count\]\)\; \/\/add 10 spaces before element value\n            count\+\+\;\n        \}\n\n        \/\/print the average to console\n        double average \= getAvgOfArrElements\(arrayOfInt\)\;\n        System\.out\.println\(\&quot;The average is\: \&quot; \+ average\)\;\n\n        \/\/define a List of cars which has it s size allocated dynamically\n        carList\.addItem\(new Car\(\&quot;Dacia\&quot;\, \&quot;1310\&quot;\)\)\;\n        carList\.addItem\(new Car\(\&quot;Dacia\&quot;\, \&quot;Sandero\&quot;\)\)\;\n        carList\.addItem\(new Car\(\&quot;Dacia\&quot;\, \&quot;Logan\&quot;\)\)\;\n        carList\.addItem\(new Car\(\&quot;Dacia\&quot;\, \&quot;Logan MCV\&quot;\)\)\;\n        Car findCar \= new Car\(\&quot;Dacia\&quot;\, \&quot;Dokker\&quot;\)\;\n        carList\.addItem\(findCar\)\;\n        carList\.addItem\(new Car\(\&quot;Dacia\&quot;\, \&quot;Lodgy\&quot;\)\)\;\n\n\n        carList\.modifyItem\(0\, new Car\(\&quot;Dacia\&quot;\, \&quot;Berlina\&quot;\)\)\;\n\n        carList\.findItem\(findCar\)\;\n\n        carList\.listItems\(carList\.getCarLinkedList\(\)\)\;\n\n        carList\.populateArrayList\(\)\;\n\n        carList\.removeItem\(3\)\;\n\n        carList\.listItems\(carList\.getCarArrayList\(\)\)\;\n\n        boolean quit \= false\;\n        int choice \= 0\;\n        printinstructions\(\)\;\n\n        while \(\!quit\) \{\n            System\.out\.println\(\&quot;Enter your choice\&quot;\)\;\n            choice \= scanner\.nextInt\(\)\;\n            scanner\.nextLine\(\)\; \/\/clear the input buffer\n\n            switch \(choice\) \{\n                case 0\:\n                    printinstructions\(\)\;\n                    break\;\n                case 1\:\n                    listItems\(\)\;\n                    break\;\n                case 2\:\n                    addItem\(\)\;\n                    break\;\n                case 3\:\n                    modifyItem\(\)\;\n                    break\;\n                case 4\:\n                    removeItem\(\)\;\n                    break\;\n                case 5\:\n                    searchForItem\(\)\;\n                    break\;\n                case 6\:\n                    System\.out\.println\(\&quot;Exit switch\!\&quot;\)\;\n                    quit \= true\;\n                    break\;\n            \}\n        \}\n    \}\n\}\n</find>
+      <find>popu</find>
+      <find>old</find>
+      <find>pop</find>
+      <find>package com\.sherbansoftware\;\n\nimport java\.util\.LinkedList\;\nimport java\.util\.List\;\n\n\/\*\*\n \* Created by Mihai Serban on 6\/22\/2017\.\n \* ArrayList is better for retrieve objects\.\n \* For object manipulation use LinkList instead\n \*\/\npublic class CarList \{\n    \/\/actual state a carLinkedList object contains a list of car objects\n    \/\/early instance to create a new generic carList that is instantiated with the empty List constructor\n    private List\&lt;Car\&gt; carLinkedList \= new LinkedList\&lt;\&gt;\(\)\;\n    \/\/If you do not use a early instance you can instantiate the empty List object in the CarList constructor\:\n    \/\*\n    \/\/ used early instance in this case\. Just for example\n    \/\/ instantiate the empty List object in the CarList constructor\:\n    public CarList\(\)\{\n        this\.carLinkedList \= new LinkedList\&lt;\&gt;\(\)\; \/\/empty list\. \(no values\)\n    \}\n    \*\/\n\n    \/\/getter for List\n    public List\&lt;Car\&gt; getCarLinkedList\(\) \{\n        return carLinkedList\;\n    \}\n\n    \/\/add a car object to list and return true if the item has added or false otherwise\n    public boolean addNewItem\(Car newCar\) \{\n        if \(findItem\(newCar\.getManufacturer\(\)\) \&gt;\= 0\) \{\n            System\.out\.println\(\&quot;The car\: \&quot; \+ newCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ newCar\.getModel\(\) \+ \&quot; is already on list\&quot;\)\;\n            return false\;\n        \}\n\n        this\.carLinkedList\.add\(newCar\)\;\n        System\.out\.println\(\&quot;The new car object count is\: \&quot; \+ carLinkedList\.size\(\)\)\;\n        System\.out\.println\(\&quot;\\t Added\: \&quot; \+ newCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ newCar\.getModel\(\)\)\;\n        return true\; \/\/successfully added the item\n    \}\n\n    \/\/Overload updateItem\n    \/\/updateItem method based on an old and a new Car object\.\n    public boolean updateItem\(Car oldCar\, Car newCar\) \{\n        int foundPosition \= findItem\(oldCar\, carLinkedList\)\;\n        if \(foundPosition \&lt; 0\) \{\n            System\.out\.println\(oldCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ oldCar\.getModel\(\) \+ \&quot; was not found\&quot;\)\;\n            return false\;\n        \}\n        this\.carLinkedList\.set\(foundPosition\, newCar\)\;\n        System\.out\.println\(oldCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ oldCar\.getModel\(\) \+ \&quot; was replaced with \&quot; \+ newCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ newCar\.getModel\(\)\)\;\n        return true\;\n    \}\n\n    \/\/updateItem method based on a new Car object\.\n    \/\/Call the updateItem method based on an index and new Car object\.\n    public void updateItem\(Car newCar\) \{\n        int position \= findItem\(newCar\, carLinkedList\)\;\n        if \(position \&gt;\= 0\) \{\n            updateItem\(position\, newCar\)\;\n        \}\n    \}\n\n    \/\/updateItem method based on an index and new Car object\.\n    public void updateItem\(int index\, Car newCar\) \{\n        carLinkedList\.set\(index\, newCar\)\;\n        int position \= index \+ 1\;\n        System\.out\.println\(\&quot;Car index \&quot; \+ position \+ \&quot; has been modified with new Model\: \&quot; \+ getItem\(index\)\.getModel\(\) \+ \&quot; and Manufacturer\: \&quot; \+ getItem\(index\)\.getManufacturer\(\)\)\;\n    \}\n\n    \/\/removeItem method removes the car object parsed as parameter from list\.\n    \/\/ Call the removeItem method that removes a car object from list based on it\'s index\n    public void removeItem\(Car carToBeRemoved\) \{\n        int position \= findItem\(carToBeRemoved\, carLinkedList\)\;\n        if \(position \&gt;\= 0\) \{\n            removeItem\(position\)\;\n        \}\n    \}\n\n    \/\/removeItem method removes a car object from list based on it\'s index\n    private void removeItem\(int position\) \{\n        Car carToRemove \= carLinkedList\.get\(position\)\;\n        carLinkedList\.remove\(carToRemove\)\;\n    \}\n\n    public void populateListWithHardcodedObjects\(\) \{\n        this\.carLinkedList\.add\(new Car\(\&quot;Dacia\&quot;\, \&quot;1310\&quot;\)\)\;\n        this\.carLinkedList\.add\(new Car\(\&quot;Dacia\&quot;\, \&quot;Dokker VAN\&quot;\)\)\;\n        this\.carLinkedList\.add\(new Car\(\&quot;Dacia\&quot;\, \&quot;New Sandero\&quot;\)\)\;\n        System\.out\.println\(\&quot;Added hardcoded values to car list\&quot;\)\;\n    \}\n\n    private Car getItem\(int index\) \{\n        return carLinkedList\.get\(index\)\;\n    \}\n\n    public void listItems\(List list\) \{\n        System\.out\.println\(\&quot;The list object contains \&quot; \+ list\.size\(\) \+ \&quot; car objects\&quot;\)\;\n        \/\/Traversing list through for\n        for \(int i \= 0\; i \&lt; list\.size\(\)\; i\+\+\) \{\n            System\.out\.println\(\&quot;\\t Car\: \&quot; \+ \(i \+ 1\) \+ \&quot; \- Manufacturer\: \&quot; \+ getCarLinkedList\(\)\.get\(i\)\.getManufacturer\(\) \+ \&quot;\. Model\: \&quot; \+ getCarLinkedList\(\)\.get\(i\)\.getModel\(\)\)\;\n        \}\n    \}\n\n    \/\/Overloaded methods\: findItem\n    \/\/public method to find item and return a Car object\. Accessed from outside class\n    public Car findItem\(Car searchedCar\) \{\n        boolean exists \= carLinkedList\.contains\(searchedCar\)\;\n        int position \= 0\;\n        if \(exists\) \{\n            position \= carLinkedList\.indexOf\(searchedCar\) \+ 1\;\n            System\.out\.println\(\&quot;\\t Found car object at position\: \&quot; \+ position\)\;\n        \} else \{\n            System\.out\.println\(\&quot;\\t Car object not found\&quot;\)\;\n        \}\n        return carLinkedList\.get\(position\)\;\n    \}\n\n    \/\* private method\, accessed within the class\, to find an item and return an integer\:\n     Params\: The object attribute\, and the list we\'re looking the item\n     \- \-1 if does not exist on the list\n     \- 0 or 1 \- if exist\n      \*\/\n    private int findItem\(String carManufacturerToBeSearched\) \{\n        for \(int i \= 0\; i \&lt; this\.carLinkedList\.size\(\)\; i\+\+\) \{\n            Car car \= this\.carLinkedList\.get\(i\)\; \/\/create a new object\n            if \(car\.getManufacturer\(\)\.equals\(carManufacturerToBeSearched\)\) \{\n                return i\; \/\/return the position in the List when the item is found\n            \}\n        \}\n        return \-1\; \/\/when the item is not found\n    \}\n\n    \/\* private method\, accessed within the class\, to find an item and return an integer\:\n Params\: The object attribute\, and the list we\'re looking the item\n \- \-1 if does not exist on the list\n \- 0 or 1 \- if exist\n  \*\/\n    private int findItem\(String carManufacturerToBeSearched\) \{\n        for \(int i \= 0\; i \&lt; this\.carLinkedList\.size\(\)\; i\+\+\) \{\n            Car car \= this\.carLinkedList\.get\(i\)\; \/\/create a new object\n            if \(car\.getManufacturer\(\)\.equals\(carManufacturerToBeSearched\)\) \{\n                return i\; \/\/return the position in the List when the item is found\n            \}\n        \}\n        return \-1\; \/\/when the item is not found\n    \}\n\n    \/\* private method\, accessed within the class\, to find an item and return an integer\:\n    Params\: The car object\, and the list we\'re looking the item\n    \- \-1 if does not exist on the list\n    \- 0 or 1 \- if exist\n     \*\/\n    private int findItem\(Car searchedCar\, List list\) \{\n        return list\.indexOf\(searchedCar\)\;\n    \}\n\n\n\}\n\n</find>
+      <find>package com\.sherbansoftware\;\n\nimport java\.util\.LinkedList\;\nimport java\.util\.List\;\n\n\/\*\*\n \* Created by Mihai Serban on 6\/22\/2017\.\n \* ArrayList is better for retrieve objects\.\n \* For object manipulation use LinkList instead\n \*\/\npublic class CarList \{\n    \/\/actual state a carLinkedList object contains a list of car objects\n    \/\/early instance to create a new generic carList that is instantiated with the empty List constructor\n    private List\&lt;Car\&gt; carLinkedList \= new LinkedList\&lt;\&gt;\(\)\;\n    \/\/If you do not use a early instance you can instantiate the empty List object in the CarList constructor\:\n    \/\*\n    \/\/ used early instance in this case\. Just for example\n    \/\/ instantiate the empty List object in the CarList constructor\:\n    public CarList\(\)\{\n        this\.carLinkedList \= new LinkedList\&lt;\&gt;\(\)\; \/\/empty list\. \(no values\)\n    \}\n    \*\/\n\n    \/\/getter for List\n    public List\&lt;Car\&gt; getCarLinkedList\(\) \{\n        return carLinkedList\;\n    \}\n\n    \/\/add a car object to list and return true if the item has added or false otherwise\n    public boolean addNewItem\(Car newCar\) \{\n        if \(findItem\(newCar\.getManufacturer\(\)\) \&gt;\= 0\) \{\n            System\.out\.println\(\&quot;The car\: \&quot; \+ newCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ newCar\.getModel\(\) \+ \&quot; is already on list\&quot;\)\;\n            return false\;\n        \}\n\n        this\.carLinkedList\.add\(newCar\)\;\n        System\.out\.println\(\&quot;The new car object count is\: \&quot; \+ carLinkedList\.size\(\)\)\;\n        System\.out\.println\(\&quot;\\t Added\: \&quot; \+ newCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ newCar\.getModel\(\)\)\;\n        return true\; \/\/successfully added the item\n    \}\n\n    \/\/Overload updateItem\n    \/\/updateItem method based on an old and a new Car object\.\n    public boolean updateItem\(Car oldCar\, Car newCar\) \{\n        int foundPosition \= findItem\(oldCar\, carLinkedList\)\;\n        if \(foundPosition \&lt; 0\) \{\n            System\.out\.println\(oldCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ oldCar\.getModel\(\) \+ \&quot; was not found\&quot;\)\;\n            return false\;\n        \}\n        this\.carLinkedList\.set\(foundPosition\, newCar\)\;\n        System\.out\.println\(oldCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ oldCar\.getModel\(\) \+ \&quot; was replaced with \&quot; \+ newCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ newCar\.getModel\(\)\)\;\n        return true\;\n    \}\n\n    \/\/updateItem method based on a new Car object\.\n    \/\/Call the updateItem method based on an index and new Car object\.\n    public void updateItem\(Car newCar\) \{\n        int position \= findItem\(newCar\, carLinkedList\)\;\n        if \(position \&gt;\= 0\) \{\n            updateItem\(position\, newCar\)\;\n        \}\n    \}\n\n    \/\/updateItem method based on an index and new Car object\.\n    public void updateItem\(int index\, Car newCar\) \{\n        carLinkedList\.set\(index\, newCar\)\;\n        int position \= index \+ 1\;\n        System\.out\.println\(\&quot;Car index \&quot; \+ position \+ \&quot; has been modified with new Model\: \&quot; \+ getItem\(index\)\.getModel\(\) \+ \&quot; and Manufacturer\: \&quot; \+ getItem\(index\)\.getManufacturer\(\)\)\;\n    \}\n\n    \/\/removeItem method removes the car object parsed as parameter from list\.\n    \/\/ Call the removeItem method that removes a car object from list based on it\'s index\n    public void removeItem\(Car carToBeRemoved\) \{\n        int position \= findItem\(carToBeRemoved\, carLinkedList\)\;\n        if \(position \&gt;\= 0\) \{\n            removeItem\(position\)\;\n        \}\n    \}\n\n    \/\/removeItem method removes a car object from list based on it\'s index\n    private void removeItem\(int position\) \{\n        Car carToRemove \= carLinkedList\.get\(position\)\;\n        carLinkedList\.remove\(carToRemove\)\;\n    \}\n\n    public void populateListWithHardcodedObjects\(\) \{\n        this\.carLinkedList\.add\(new Car\(\&quot;Dacia\&quot;\, \&quot;1310\&quot;\)\)\;\n        this\.carLinkedList\.add\(new Car\(\&quot;Dacia\&quot;\, \&quot;Dokker VAN\&quot;\)\)\;\n        this\.carLinkedList\.add\(new Car\(\&quot;Dacia\&quot;\, \&quot;New Sandero\&quot;\)\)\;\n        System\.out\.println\(\&quot;Added hardcoded values to car list\&quot;\)\;\n    \}\n\n    private Car getItem\(int index\) \{\n        return carLinkedList\.get\(index\)\;\n    \}\n\n    public void listItems\(List list\) \{\n        System\.out\.println\(\&quot;The list object contains \&quot; \+ list\.size\(\) \+ \&quot; car objects\&quot;\)\;\n        \/\/Traversing list through for\n        for \(int i \= 0\; i \&lt; list\.size\(\)\; i\+\+\) \{\n            System\.out\.println\(\&quot;\\t Car\: \&quot; \+ \(i \+ 1\) \+ \&quot; \- Manufacturer\: \&quot; \+ getCarLinkedList\(\)\.get\(i\)\.getManufacturer\(\) \+ \&quot;\. Model\: \&quot; \+ getCarLinkedList\(\)\.get\(i\)\.getModel\(\)\)\;\n        \}\n    \}\n\n    \/\/Overloaded methods\: findItem\n    \/\/public method to find item and return a Car object\. Accessed from outside class\n    public Car findItem\(Car searchedCar\) \{\n        boolean exists \= carLinkedList\.contains\(searchedCar\)\;\n        int position \= 0\;\n        if \(exists\) \{\n            position \= carLinkedList\.indexOf\(searchedCar\) \+ 1\;\n            System\.out\.println\(\&quot;\\t Found car object at position\: \&quot; \+ position\)\;\n        \} else \{\n            System\.out\.println\(\&quot;\\t Car object not found\&quot;\)\;\n        \}\n        return carLinkedList\.get\(position\)\;\n    \}\n\n    \/\* private method\, accessed within the class\, to find an item and return an integer\:\n     Params\: The object attribute\, and the list we\'re looking the item\n     \- \-1 if does not exist on the list\n     \- 0 or 1 \- if exist\n      \*\/\n    private int findItem\(String carManufacturerToBeSearched\) \{\n        for \(int i \= 0\; i \&lt; this\.carLinkedList\.size\(\)\; i\+\+\) \{\n            Car car \= this\.carLinkedList\.get\(i\)\; \/\/create a new object\n            if \(car\.getManufacturer\(\)\.equals\(carManufacturerToBeSearched\)\) \{\n                return i\; \/\/return the position in the List when the item is found\n            \}\n        \}\n        return \-1\; \/\/when the item is not found\n    \}\n\n    \/\* private method\, accessed within the class\, to find an item and return an integer\:\n Params\: The object attribute\, and the list we\'re looking the item\n \- \-1 if does not exist on the list\n \- 0 or 1 \- if exist\n  \*\/\n    private Car findItem\(String carManufacturerToBeSearched\) \{\n        for \(Car searchedItem\: this\.carLinkedList\) \{\n            if \(searchedItem\.getManufacturer\(\)\.equals\(carManufacturerToBeSearched\)\) \{\n                return searchedItem\; \/\/return the searchedItem \n            \}\n        \}\n        return null\; \/\/when the item is not found\n    \}\n\n    \/\* private method\, accessed within the class\, to find an item and return an integer\:\n    Params\: The car object\, and the list we\'re looking the item\n    \- \-1 if does not exist on the list\n    \- 0 or 1 \- if exist\n     \*\/\n    private int findItem\(Car searchedCar\, List list\) \{\n        return list\.indexOf\(searchedCar\)\;\n    \}\n\n\n\}\n\n</find>
+      <find>package com\.sherbansoftware\;\n\nimport java\.util\.Collection\;\nimport java\.util\.LinkedList\;\nimport java\.util\.List\;\n\n\/\*\*\n \* Created by Mihai Serban on 6\/22\/2017\.\n \* ArrayList is better for retrieve objects\.\n \* For object manipulation use LinkList instead\n \*\/\npublic class CarList \{\n    \/\/actual state a carLinkedList object contains a list of car objects\n    \/\/early instance to create a new generic carList that is instantiated with the empty List constructor\n    private List\&lt;Car\&gt; carLinkedList \= new LinkedList\&lt;\&gt;\(\)\;\n    \/\/If you do not use a early instance you can instantiate the empty List object in the CarList constructor\:\n    \/\*\n    \/\/ used early instance in this case\. Just for example\n    \/\/ instantiate the empty List object in the CarList constructor\:\n    public CarList\(\)\{\n        this\.carLinkedList \= new LinkedList\&lt;\&gt;\(\)\; \/\/empty list\. \(no values\)\n    \}\n    \*\/\n\n    \/\/getter for List\n    public List\&lt;Car\&gt; getCarLinkedList\(\) \{\n        return carLinkedList\;\n    \}\n\n    \/\/add a car object to list and return true if the item has added or false otherwise\n    public boolean addNewItem\(Car newCar\) \{\n        if \(findItem\(newCar\.getManufacturer\(\)\) \&gt;\= 0\) \{\n            System\.out\.println\(\&quot;The car\: \&quot; \+ newCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ newCar\.getModel\(\) \+ \&quot; is already on list\&quot;\)\;\n            return false\;\n        \}\n\n        this\.carLinkedList\.add\(newCar\)\;\n        System\.out\.println\(\&quot;The new car object count is\: \&quot; \+ carLinkedList\.size\(\)\)\;\n        System\.out\.println\(\&quot;\\t Added\: \&quot; \+ newCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ newCar\.getModel\(\)\)\;\n        return true\; \/\/successfully added the item\n    \}\n\n    \/\/Overload updateItem\n    \/\/updateItem method based on an old and a new Car object\.\n    public boolean updateItem\(Car oldCar\, Car newCar\) \{\n        int foundPosition \= findItem\(oldCar\, carLinkedList\)\;\n        if \(foundPosition \&lt; 0\) \{\n            System\.out\.println\(oldCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ oldCar\.getModel\(\) \+ \&quot; was not found\&quot;\)\;\n            return false\;\n        \}\n        this\.carLinkedList\.set\(foundPosition\, newCar\)\;\n        System\.out\.println\(oldCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ oldCar\.getModel\(\) \+ \&quot; was replaced with \&quot; \+ newCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ newCar\.getModel\(\)\)\;\n        return true\;\n    \}\n\n    \/\/updateItem method based on a new Car object\.\n    \/\/Call the updateItem method based on an index and new Car object\.\n    public void updateItem\(Car newCar\) \{\n        int position \= findItem\(newCar\, carLinkedList\)\;\n        if \(position \&gt;\= 0\) \{\n            updateItem\(position\, newCar\)\;\n        \}\n    \}\n\n    \/\/updateItem method based on an index and new Car object\.\n    public void updateItem\(int index\, Car newCar\) \{\n        carLinkedList\.set\(index\, newCar\)\;\n        int position \= index \+ 1\;\n        System\.out\.println\(\&quot;Car index \&quot; \+ position \+ \&quot; has been modified with new Model\: \&quot; \+ getItem\(index\)\.getModel\(\) \+ \&quot; and Manufacturer\: \&quot; \+ getItem\(index\)\.getManufacturer\(\)\)\;\n    \}\n\n    \/\/removeItem method removes a car object from a List based on start and end position\n    private void removeItem\(List\&lt;Car\&gt; list\, int startPosition\, int endPosition\) \{\n        list\.subList\(startPosition\, endPosition\)\.clear\(\)\; \/\/remove items\n    \}\n\n    \/\/removeItem method removes the car object parsed as parameter from list\.\n    \/\/ Call the removeItem method that removes a car object from list based on it\'s index\n    public void removeItem\(Car carToBeRemoved\) \{\n        int position \= findItem\(carToBeRemoved\, carLinkedList\)\;\n        if \(position \&gt;\= 0\) \{\n            removeItem\(position\)\;\n        \}\n    \}\n\n    \/\/removeItem method removes a car object from list based on it\'s index\n    private void removeItem\(int position\) \{\n        Car carToRemove \= carLinkedList\.get\(position\)\;\n        carLinkedList\.remove\(carToRemove\)\;\n    \}\n\n    public void populateListWithHardcodedObjects\(\) \{\n        this\.carLinkedList\.add\(new Car\(\&quot;Dacia\&quot;\, \&quot;1310\&quot;\)\)\;\n        this\.carLinkedList\.add\(new Car\(\&quot;Dacia\&quot;\, \&quot;Dokker VAN\&quot;\)\)\;\n        this\.carLinkedList\.add\(new Car\(\&quot;Dacia\&quot;\, \&quot;New Sandero\&quot;\)\)\;\n        System\.out\.println\(\&quot;Added hardcoded values to car list\&quot;\)\;\n    \}\n\n    private Car getItem\(int index\) \{\n        return carLinkedList\.get\(index\)\;\n    \}\n\n    public void listItems\(List list\) \{\n        System\.out\.println\(\&quot;The list object contains \&quot; \+ list\.size\(\) \+ \&quot; car objects\&quot;\)\;\n        \/\/Traversing list through for\n        for \(int i \= 0\; i \&lt; list\.size\(\)\; i\+\+\) \{\n            System\.out\.println\(\&quot;\\t Car\: \&quot; \+ \(i \+ 1\) \+ \&quot; \- Manufacturer\: \&quot; \+ getCarLinkedList\(\)\.get\(i\)\.getManufacturer\(\) \+ \&quot;\. Model\: \&quot; \+ getCarLinkedList\(\)\.get\(i\)\.getModel\(\)\)\;\n        \}\n    \}\n\n    public void listCollectionItems\(Collection\&lt;Car\&gt; collection\) \{\n        System\.out\.println\(\&quot;The list object contains \&quot; \+ collection\.size\(\) \+ \&quot; car objects\&quot;\)\;\n        \/\/Traversing list through for each statement\n        int i \= 0\;\n        for \(Car car \: collection\) \{\n            System\.out\.println\(\&quot;\\t Car\: \&quot; \+ \(i \+ 1\) \+ \&quot; \- Manufacturer\: \&quot; \+ car\.getManufacturer\(\) \+ \&quot;\. Model\: \&quot; \+ car\.getModel\(\)\)\;\n            i\+\+\;\n        \}\n    \}\n\n    \/\/Overloaded methods\: findItem\n    \/\/public method to find item and return a Car object\. Accessed from outside class\n    public Car findItem\(Car searchedCar\) \{\n        boolean exists \= carLinkedList\.contains\(searchedCar\)\;\n        int position \= 0\;\n        if \(exists\) \{\n            position \= carLinkedList\.indexOf\(searchedCar\) \+ 1\;\n            System\.out\.println\(\&quot;\\t Found car object at position\: \&quot; \+ position\)\;\n        \} else \{\n            System\.out\.println\(\&quot;\\t Car object not found\&quot;\)\;\n        \}\n        return carLinkedList\.get\(position\)\;\n    \}\n\n    \/\* private method\, accessed within the class\, to find an item and return an integer\:\n     Params\: The object attribute\, and the list we\'re looking the item\n     \- \-1 if does not exist on the list\n     \- 0 or 1 \- if exist\n      \*\/\n    private int findItem\(String carManufacturerToBeSearched\) \{\n        for \(int i \= 0\; i \&lt; this\.carLinkedList\.size\(\)\; i\+\+\) \{\n            Car car \= this\.carLinkedList\.get\(i\)\; \/\/create a new object\n            if \(car\.getManufacturer\(\)\.equals\(carManufacturerToBeSearched\)\) \{\n                return i\; \/\/return the position in the List when the item is found\n            \}\n        \}\n        return \-1\; \/\/when the item is not found\n    \}\n\n    \/\* private method\, accessed within the class\, to find an item and return a Car object\:\n  \*\/\n    private Car findItemReturnCar\(String carManufacturerToBeSearched\) \{\n        for \(Car searchedItem \: this\.carLinkedList\) \{\n            if \(searchedItem\.getManufacturer\(\)\.equals\(carManufacturerToBeSearched\)\) \{\n                return searchedItem\; \/\/return the searchedItem\n            \}\n        \}\n        return null\; \/\/when the item is not found\n    \}\n\n    \/\* private method\, accessed within the class\, to find an item and return an integer\:\n    Params\: The car object\, and the list we\'re looking the item\n    \- \-1 if does not exist on the list\n    \- 0 or 1 \- if exist\n     \*\/\n    private int findItem\(Car searchedCar\, List list\) \{\n        return list\.indexOf\(searchedCar\)\;\n    \}\n\n\n\}\n\n</find>
+      <find>package com\.sherbansoftware\;\n\nimport java\.util\.Scanner\;\n\n\/\*\*\n \* Java array is an object the contains elements of similar data type\. It is a data structure where we store similar elements\. We can store only fixed set of elements in a java array\.\n \* Eg\. array of characters\, array of integer\, array of String\, array of SomeObject\n \*\/\npublic class Main \{\n    \/\/define a List of cars which has it s size allocated dynamically\n    private static CarList carList \= new CarList\(\)\;\n    private static Scanner scanner \= new Scanner\(System\.in\)\;\n\n    \/\/ static method which return the average of array elements\n    private static double getAvgOfArrElements\(int\[\] arr\) \{\n        int sum \= 0\;\n        for \(int i \= 0\; i \&lt; arr\.length\; i\+\+\) \{\n            sum \+\= arr\[i\]\;\n        \}\n        return \(double\) sum \/ \(double\) arr\.length\;\n    \}\n\n    \/\/private static methods from the switch statement\n    private static void populateListWithHardcodedData\(\) \{\n        carList\.populateListWithHardcodedObjects\(\)\;\n    \}\n\n    private static void listItems\(\) \{\n        carList\.listItems\(carList\.getCarLinkedList\(\)\)\;\n        carList\.listCollectionItems\(carList\.getCarLinkedList\(\)\)\;\n    \}\n\n    private static void addData\(\) \{\n        System\.out\.print\(\&quot;Enter a car manufacturer to be added\: \&quot;\)\;\n        String carManufacturer \= scanner\.nextLine\(\)\;\n        System\.out\.print\(\&quot;Enter a car model to be added\: \&quot;\)\;\n        String carModel \= scanner\.nextLine\(\)\;\n        Car carToBeAdded \= new Car\(carManufacturer\, carModel\)\;\n        carList\.addNewItem\(carToBeAdded\)\;\n    \}\n\n    private static void updateData\(\) \{\n\/\/        System\.out\.print\(\&quot;Enter item number to be modified\: \&quot;\)\;\n\/\/        int itemNo \= scanner\.nextInt\(\)\;\n\/\/        scanner\.nextLine\(\)\;\n\n        \/\/Car carToBeModified \= new Car\(\&quot;Manufacturer to be modified\&quot;\, \&quot;Model to be modified\&quot;\)\;\n        \/\/Note that for the user should not use an index to access particular elements in order to modify a car item\. Just as example\.\n        \/\/carList\.updateItem\(itemNo \- 1\, carToBeModified\)\;  \/\/ \/\/call to modify a car based on it\'s index\n        \/\/ System\.out\.println\(\)\;\n        \/\/carList\.updateItem\(new Car\(\&quot;Dacia\&quot;\, \&quot;Berlina\&quot;\)\)\; \/\/call to modify a specific car\n        Car oldCar \= new Car\(\&quot;Dacia\&quot;\, \&quot;1310\&quot;\)\;\n        Car newCar \= new Car\(\&quot;Daciaxx\&quot;\, \&quot;Berlinaxxx\&quot;\)\;\n        carList\.updateItem\(oldCar\, newCar\)\;\n    \}\n\n    private static void removeData\(\) \{\n        System\.out\.print\(\&quot;Enter a car manufacturer to be deleted\: \&quot;\)\;\n        String carManufacturerToBeDeleted \= scanner\.nextLine\(\)\;\n        System\.out\.print\(\&quot;Enter a car model to be deleted\: \&quot;\)\;\n        String carModelToBeDeleted \= scanner\.nextLine\(\)\;\n        \/\/Note that for the user should not use an index to access particular elements in order to remove a car item\. Just as example\.\n        \/\/carList\.removeItem\(carManufacturerToBeDeleted\, carModelToBeDeleted\)\)\;  \/\/call to remove a specific car\n        carList\.removeItem\(carList\.getCarLinkedList\(\)\, 1\, 3\)\;    \n    \}\n\n\n\n    private static void searchForItem\(\) \{\n        System\.out\.print\(\&quot;Enter a car manufacturer to be searched\: \&quot;\)\;\n        String carManufacturer \= scanner\.nextLine\(\)\;\n        System\.out\.print\(\&quot;Enter a car model to be searched\: \&quot;\)\;\n        String carModel \= scanner\.nextLine\(\)\;\n        Car searchedCar \= new Car\(carManufacturer\, carModel\)\;\n        if \(carList\.findItem\(searchedCar\) \!\= null\) \{\n            System\.out\.println\(\&quot;Found \&quot; \+ searchedCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ searchedCar\.getModel\(\) \+ \&quot; in  our car list\&quot; \+ \&quot; at position\: \&quot; \+ carList\.getCarLinkedList\(\)\.indexOf\(searchedCar\)\)\;\n        \} else \{\n            System\.out\.println\(searchedCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ searchedCar\.getModel\(\) \+ \&quot; is not in the car list\&quot;\)\;\n        \}\n    \}\n\n    private static void printInstructions\(\) \{\n        System\.out\.println\(\&quot;\\nPress \&quot;\)\;\n        System\.out\.println\(\&quot;\\t 0 \- To print choice options\.\&quot;\)\;\n        System\.out\.println\(\&quot;\\t 1 \- To print the list of car items within the list\.\&quot;\)\;\n        System\.out\.println\(\&quot;\\t 2 \- To populate list with hardcoded data\.\&quot;\)\;\n        System\.out\.println\(\&quot;\\t 3 \- To add a new car item to the list\.\&quot;\)\;\n        System\.out\.println\(\&quot;\\t 4 \- To update an existing car item in the list\.\&quot;\)\;\n        System\.out\.println\(\&quot;\\t 5 \- To delete a car item from the list\.\&quot;\)\;\n        System\.out\.println\(\&quot;\\t 6 \- To search for a car item in the list\.\&quot;\)\;\n        System\.out\.println\(\&quot;\\t 7 \- To quit the application\.\&quot;\)\;\n    \}\n\n    \/\/Entry point for JVM\n    public static void main\(String\[\] args\) \{\n        int\[\] arrayOfInt \= new int\[5\]\;\/\/declaration and instantiation\, space for 5 elements\. \[\] may be after or before variable name\.\n        arrayOfInt\[0\] \= 5\; \/\/initialization of first element\n        arrayOfInt\[1\] \= 20\;\n        arrayOfInt\[2\] \= 80\;\n        arrayOfInt\[3\] \= 32\;\n        arrayOfInt\[4\] \= 43\; \/\/initialization of last element\n\n        \/\/reassign values to array elements\n        for \(int i \= 0\; i \&lt; arrayOfInt\.length\; i\+\+\) \{\n            arrayOfInt\[i\] \+\= 10\;\n        \}\n\n        \/\/list the new array elements with for each\n        System\.out\.println\(\&quot;list the new array elements with for each loop\&quot;\)\;\n        int count \= 0\;\n        for \(int i \: arrayOfInt\) \{\n            System\.out\.printf\(\&quot;arrayOfInt\[\&quot; \+ count \+ \&quot;\] \= \%10d\\n\&quot;\, i\)\; \/\/add 10 spaces before element value\n            count\+\+\;\n        \}\n        System\.out\.println\(\)\;\n        System\.out\.println\(\&quot;list the new array elements with while loop\&quot;\)\;\n\n        \/\/list the new array elements with while loop\n        count \= 0\;\n        while \(count \&lt; arrayOfInt\.length\) \{\n            System\.out\.printf\(\&quot;arrayOfInt\[\&quot; \+ count \+ \&quot;\] \= \%10d\\n\&quot;\, arrayOfInt\[count\]\)\; \/\/add 10 spaces before element value\n            count\+\+\;\n        \}\n\n        \/\/print the average to console\n        double average \= getAvgOfArrElements\(arrayOfInt\)\;\n        System\.out\.println\(\&quot;The average is\: \&quot; \+ average\)\;\n\n        boolean quit \= false\;\n        int choice\;\n        printInstructions\(\)\;\n\n        while \(\!quit\) \{\n            System\.out\.println\(\&quot;Enter your choice\&quot;\)\;\n            choice \= scanner\.nextInt\(\)\;\n            scanner\.nextLine\(\)\; \/\/clear the input buffer\n\n            switch \(choice\) \{\n                case 0\:\n                    printInstructions\(\)\;\n                    break\;\n                case 1\:\n                    listItems\(\)\;\n                    break\;\n                case 2\:\n                    populateListWithHardcodedData\(\)\;\n                    break\;\n                case 3\:\n                    addData\(\)\;\n                    break\;\n                case 4\:\n                    updateData\(\)\;\n                    break\;\n                case 5\:\n                    removeData\(\)\;\n                    break\;\n                case 6\:\n                    searchForItem\(\)\;\n                    break\;\n                case 7\:\n                    System\.out\.println\(\&quot;Exit switch\!\&quot;\)\;\n                    quit \= true\;\n                    break\;\n            \}\n        \}\n    \}\n\}\n</find>
+      <find>package com\.sherbansoftware\;\n\nimport java\.util\.Collection\;\nimport java\.util\.Iterator\;\nimport java\.util\.LinkedList\;\nimport java\.util\.List\;\n\n\/\*\*\n \* Created by Mihai Serban on 6\/22\/2017\.\n \* ArrayList is better for retrieve objects\.\n \* For object manipulation use LinkList instead\n \*\/\npublic class CarList \{\n    \/\/actual state a carLinkedList object contains a list of car objects\n    \/\/early instance to create a new generic carList that is instantiated with the empty List constructor\n    private List\&lt;Car\&gt; carLinkedList \= new LinkedList\&lt;\&gt;\(\)\;\n    \/\/If you do not use a early instance you can instantiate the empty List object in the CarList constructor\:\n    \/\*\n    \/\/ used early instance in this case\. Just for example\n    \/\/ instantiate the empty List object in the CarList constructor\:\n    public CarList\(\)\{\n        this\.carLinkedList \= new LinkedList\&lt;\&gt;\(\)\; \/\/empty list\. \(no values\)\n    \}\n    \*\/\n\n    \/\/getter for List\n    public List\&lt;Car\&gt; getCarLinkedList\(\) \{\n        return carLinkedList\;\n    \}\n\n    \/\/add a car object to list and return true if the item has added or false otherwise\n    public boolean addNewItem\(Car newCar\) \{\n        if \(findItem\(newCar\.getManufacturer\(\)\) \&gt;\= 0\) \{\n            System\.out\.println\(\&quot;The car\: \&quot; \+ newCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ newCar\.getModel\(\) \+ \&quot; is already on list\&quot;\)\;\n            return false\;\n        \}\n\n        this\.carLinkedList\.add\(newCar\)\;\n        System\.out\.println\(\&quot;The new car object count is\: \&quot; \+ carLinkedList\.size\(\)\)\;\n        System\.out\.println\(\&quot;\\t Added\: \&quot; \+ newCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ newCar\.getModel\(\)\)\;\n        return true\; \/\/successfully added the item\n    \}\n\n    \/\/Overload updateItem\n    \/\/updateItem method based on an old and a new Car object\.\n    public boolean updateItem\(Car oldCar\, Car newCar\) \{\n        int foundPosition \= findItem\(oldCar\, carLinkedList\)\;\n        if \(foundPosition \&lt; 0\) \{\n            System\.out\.println\(oldCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ oldCar\.getModel\(\) \+ \&quot; was not found\&quot;\)\;\n            return false\;\n        \}\n        this\.carLinkedList\.set\(foundPosition\, newCar\)\;\n        System\.out\.println\(oldCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ oldCar\.getModel\(\) \+ \&quot; was replaced with \&quot; \+ newCar\.getManufacturer\(\) \+ \&quot; \&quot; \+ newCar\.getModel\(\)\)\;\n        return true\;\n    \}\n\n    \/\/updateItem method based on a new Car object\.\n    \/\/Call the updateItem method based on an index and new Car object\.\n    public void updateItem\(Car newCar\) \{\n        int position \= findItem\(newCar\, carLinkedList\)\;\n        if \(position \&gt;\= 0\) \{\n            updateItem\(position\, newCar\)\;\n        \}\n    \}\n\n    \/\/updateItem method based on an index and new Car object\.\n    public void updateItem\(int index\, Car newCar\) \{\n        carLinkedList\.set\(index\, newCar\)\;\n        int position \= index \+ 1\;\n        System\.out\.println\(\&quot;Car index \&quot; \+ position \+ \&quot; has been modified with new Model\: \&quot; \+ getItem\(index\)\.getModel\(\) \+ \&quot; and Manufacturer\: \&quot; \+ getItem\(index\)\.getManufacturer\(\)\)\;\n    \}\n\n    \/\/removeItem method removes a car object from a List based on start and end position\n    public void removeItem\(List\&lt;Car\&gt; list\, int startPosition\, int endPosition\) \{\n        list\.subList\(startPosition\, endPosition\)\.clear\(\)\; \/\/remove items\n    \}\n\n    \/\/removeItem method removes the car object parsed as parameter from list\.\n    \/\/ Call the removeItem method that removes a car object from list based on it\'s index\n    public void removeItem\(Car carToBeRemoved\) \{\n        int position \= findItem\(carToBeRemoved\, carLinkedList\)\;\n        if \(position \&gt;\= 0\) \{\n            removeItem\(position\)\;\n        \}\n    \}\n\n    \/\/removeItem method removes a car object from list based on it\'s index\n    private void removeItem\(int position\) \{\n        Car carToRemove \= carLinkedList\.get\(position\)\;\n        carLinkedList\.remove\(carToRemove\)\;\n    \}\n\n    public void populateListWithHardcodedObjects\(\) \{\n        this\.carLinkedList\.add\(new Car\(\&quot;Dacia\&quot;\, \&quot;1310\&quot;\)\)\;\n        this\.carLinkedList\.add\(new Car\(\&quot;Dacia\&quot;\, \&quot;Dokker VAN\&quot;\)\)\;\n        this\.carLinkedList\.add\(new Car\(\&quot;Dacia\&quot;\, \&quot;New Sandero\&quot;\)\)\;\n        System\.out\.println\(\&quot;Added hardcoded values to car list\&quot;\)\;\n    \}\n\n    private Car getItem\(int index\) \{\n        return carLinkedList\.get\(index\)\;\n    \}\n\n    public void listItems\(List list\) \{\n        System\.out\.println\(\&quot;The list object contains \&quot; \+ list\.size\(\) \+ \&quot; car objects\&quot;\)\;\n        \/\/Traversing list through for\n        for \(int i \= 0\; i \&lt; list\.size\(\)\; i\+\+\) \{\n            System\.out\.println\(\&quot;\\t Car\: \&quot; \+ \(i \+ 1\) \+ \&quot; \- Manufacturer\: \&quot; \+ getCarLinkedList\(\)\.get\(i\)\.getManufacturer\(\) \+ \&quot;\. Model\: \&quot; \+ getCarLinkedList\(\)\.get\(i\)\.getModel\(\)\)\;\n        \}\n    \}\n\n    public void listCollectionItems\(Collection\&lt;Car\&gt; collection\) \{\n        System\.out\.println\(\&quot;The list object contains \&quot; \+ collection\.size\(\) \+ \&quot; car objects\&quot;\)\;\n        \/\/Traversing list through for each statement\n        int i \= 0\;\n        for \(Car car \: collection\) \{\n            System\.out\.println\(\&quot;\\t Car\: \&quot; \+ \(i \+ 1\) \+ \&quot; \- Manufacturer\: \&quot; \+ car\.getManufacturer\(\) \+ \&quot;\. Model\: \&quot; \+ car\.getModel\(\)\)\;\n            i\+\+\;\n        \}\n    \}\n\n    \/\/Overloaded methods\: findItem\n    \/\/public method to find item and return a Car object\. Accessed from outside class\n    public Car findItem\(Car searchedCar\) \{\n        boolean exists \= carLinkedList\.contains\(searchedCar\)\;\n        int position \= 0\;\n        if \(exists\) \{\n            position \= carLinkedList\.indexOf\(searchedCar\) \+ 1\;\n            System\.out\.println\(\&quot;\\t Found car object at position\: \&quot; \+ position\)\;\n        \} else \{\n            System\.out\.println\(\&quot;\\t Car object not found\&quot;\)\;\n        \}\n        return carLinkedList\.get\(position\)\;\n    \}\n\n    \/\* private method\, accessed within the class\, to find an item and return an integer\:\n     Params\: The object attribute\, and the list we\'re looking the item\n     \- \-1 if does not exist on the list\n     \- 0 or 1 \- if exist\n      \*\/\n    private int findItem\(String carManufacturerToBeSearched\) \{\n        for \(int i \= 0\; i \&lt; this\.carLinkedList\.size\(\)\; i\+\+\) \{\n            Car car \= this\.carLinkedList\.get\(i\)\; \/\/create a new object\n            if \(car\.getManufacturer\(\)\.equals\(carManufacturerToBeSearched\)\) \{\n                return i\; \/\/return the position in the List when the item is found\n            \}\n        \}\n        return \-1\; \/\/when the item is not found\n    \}\n\n    \/\* private method\, accessed within the class\, to find an item and return a Car object\:\n  \*\/\n    private Car findItemReturnCar\(String carManufacturerToBeSearched\) \{\n        for \(Car searchedItem \: this\.carLinkedList\) \{\n            if \(searchedItem\.getManufacturer\(\)\.equals\(carManufacturerToBeSearched\)\) \{\n                return searchedItem\; \/\/return the searchedItem\n            \}\n        \}\n        return null\; \/\/when the item is not found\n    \}\n\n    private Car findItemReturnCarInCollection\(Car carToFind\, Collection\&lt;Car\&gt; carCollection\) \{\n        Iterator\&lt;Car\&gt; iterator \= carCollection\.iterator\(\)\;\n\n        while\(iterator\.hasNext\(\)\)\{\n            if\(carCollection\.contains\(carToFind\)\)\{\n                return carToFind\;\n            \}\n        \}\n    \}\n\n    \/\* private method\, accessed within the class\, to find an item and return an integer\:\n    Params\: The car object\, and the list we\'re looking the item\n    \- \-1 if does not exist on the list\n    \- 0 or 1 \- if exist\n     \*\/\n    private int findItem\(Car searchedCar\, List list\) \{\n        return list\.indexOf\(searchedCar\)\;\n    \}\n\n\n\}\n\n</find>
+      <find>itera</find>
+      <find>main</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/sherbansoftware/Car.java" />
+        <option value="$PROJECT_DIR$/src/com/sherbansoftware/CarNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/com/sherbansoftware/CarList.java" />
+        <option value="$PROJECT_DIR$/src/com/sherbansoftware/GroceryList.java" />
+        <option value="$PROJECT_DIR$/src/com/sherbansoftware/Main.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1378" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="06. Autoboxing, unboxing, arrays, lists, abstract classes and interface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06. Autoboxing, unboxing, arrays, lists, abstract classes and interface" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="06. Autoboxing, unboxing, arrays, lists, abstract classes and interface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06. Autoboxing, unboxing, arrays, lists, abstract classes and interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="06. Autoboxing, unboxing, arrays, lists, abstract classes and interface" type="b2602c69:ProjectViewProjectNode" />
+              <item name="06. Autoboxing, unboxing, arrays, lists, abstract classes and interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sherbansoftware" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sherbansoftware" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="com.sherbansoftware.Main" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Autoboxing, unboxing, arrays, lists, abstract classes and interface" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Autoboxing, unboxing, arrays, lists, abstract classes and interface" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30b91fc0-aa74-460a-9aa4-58217cfc0936" name="Default" comment="" />
+      <created>1498069152843</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1498069152843</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40969163" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13656388" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="10" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+          <folding>
+            <element signature="e#211#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1584">
+          <caret line="75" column="24" lean-forward="false" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+          <folding>
+            <element signature="e#211#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3537">
+          <caret line="135" column="19" lean-forward="false" selection-start-line="135" selection-start-column="19" selection-end-line="135" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3834">
+          <caret line="145" column="21" lean-forward="false" selection-start-line="145" selection-start-column="21" selection-end-line="145" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3537">
+          <caret line="135" column="19" lean-forward="false" selection-start-line="135" selection-start-column="19" selection-end-line="135" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3834">
+          <caret line="145" column="21" lean-forward="true" selection-start-line="145" selection-start-column="21" selection-end-line="145" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3051">
+          <caret line="117" column="49" lean-forward="false" selection-start-line="117" selection-start-column="49" selection-end-line="117" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="30" column="18" lean-forward="false" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4401">
+          <caret line="165" column="26" lean-forward="true" selection-start-line="165" selection-start-column="26" selection-end-line="165" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="38" column="19" lean-forward="false" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1998">
+          <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/List.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1809">
+          <caret line="69" column="31" lean-forward="true" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1404">
+          <caret line="52" column="23" lean-forward="false" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="52" column="23" lean-forward="false" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="35" column="67" lean-forward="false" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="26" column="44" lean-forward="false" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1674">
+          <caret line="64" column="192" lean-forward="false" selection-start-line="64" selection-start-column="192" selection-end-line="64" selection-end-column="192" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="35" column="67" lean-forward="false" selection-start-line="35" selection-start-column="67" selection-end-line="35" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="26" column="44" lean-forward="false" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1728">
+          <caret line="64" column="192" lean-forward="false" selection-start-line="64" selection-start-column="192" selection-end-line="64" selection-end-column="192" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4077">
+          <caret line="151" column="52" lean-forward="false" selection-start-line="151" selection-start-column="52" selection-end-line="151" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1107">
+          <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/List.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+          <folding>
+            <element signature="e#211#212#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/function/Predicate.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/CarList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="258" column="1" lean-forward="false" selection-start-line="258" selection-start-column="1" selection-end-line="258" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/GroceryList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
