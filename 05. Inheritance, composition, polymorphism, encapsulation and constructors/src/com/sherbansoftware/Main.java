@@ -24,6 +24,11 @@ public class Main {
         samsung = new Tv("Samsung", resolution, screen, device.getInternalProcessor(), device.getPowerStatus());
         samsung.turnOn();
 
+        Device factoryDevice = device.getFactoryInstance();
+        System.out.println("Default processor is: " + factoryDevice.getInternalProcessor());
+        factoryDevice = factoryDevice.getDeviceDefaultImplementation();
+        System.out.println(factoryDevice.getInternalProcessor());
+
         String type = samsung.getScreen().getType(); //access a particular screen attribute using the Tv object.
         samsung.getScreen().setType("Q" + type); //Method chaining
 

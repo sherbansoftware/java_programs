@@ -17,6 +17,17 @@ public class Device implements IPolymorphicDevice {
     public String showPolymorphism(){
         return getClass().toString();
     }
+
+    public Device getFactoryInstance(){
+        return IPolymorphicDevice.getFactoryInstance();
+    }
+
+    public Device getDeviceDefaultImplementation(){
+        Device usualDevice = new Device("123 Ghz", "Off");
+        Device defaultDevice = usualDevice.getDefaultImplementation();
+        return defaultDevice;
+    }
+
     public void setPowerStatus(String powerStatus) {
         this.powerStatus = powerStatus;
     }
