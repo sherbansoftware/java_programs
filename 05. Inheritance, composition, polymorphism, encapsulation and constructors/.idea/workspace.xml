@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f97a461d-3fbb-412c-ae71-7643b7d7c9ef" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f97a461d-3fbb-412c-ae71-7643b7d7c9ef" name="Default" comment="Add JDK9 private, static and default methods in interfaces">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inheritance, classes and constructors/com/sherbansoftware/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inheritance, classes and constructors/com/sherbansoftware/Device.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inheritance, classes and constructors/com/sherbansoftware/Door.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inheritance, classes and constructors/com/sherbansoftware/Engine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inheritance, classes and constructors/com/sherbansoftware/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inheritance, classes and constructors/com/sherbansoftware/Resolution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inheritance, classes and constructors/com/sherbansoftware/Room.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inheritance, classes and constructors/com/sherbansoftware/Screen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inheritance, classes and constructors/com/sherbansoftware/Tv.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Inheritance, classes and constructors/com/sherbansoftware/Vehicle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sherbansoftware/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sherbansoftware/Device.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sherbansoftware/IPolymorphicDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sherbansoftware/IPolymorphicDevice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sherbansoftware/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sherbansoftware/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -36,28 +22,34 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="268" />
+          <entry key="java" value="755" />
+          <entry key="txt" value="85" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="268" />
+          <entry key="JAVA" value="755" />
+          <entry key="PLAIN_TEXT" value="85" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+            <state relative-caret-position="242">
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <folding>
+                <element signature="e#310#311#0" expanded="true" />
+                <element signature="e#350#351#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/IPolymorphicDevice.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="305">
@@ -166,6 +158,7 @@
       <find>s</find>
       <find>size</find>
       <find>devvi</find>
+      <find>package com\.sherbansoftware\;\n\npublic class Main \{\n\n    \/\*\*\n     \* This is the entry point for a Java program\.\n     \* In a Java program\, the JVM goes directly and searches for a main method in order to execute it\.\n     \*\/\n\n    public static void main\(String\[\] args\) throws CloneNotSupportedException \{\n        Thread thread \= new Thread\(new Runnable\(\) \{\n            \@Override\n            public void run\(\) \{\n                \/\/simulate Mihai Serban\'s bedroom\n                Room bedroom \= new Room\(\&quot;Mihai Serban\&quot;\, new Tv\(\)\)\;\n                String tv \= bedroom\.getName\(\)\;\n                System\.out\.println\(\&quot;TV is\: \&quot; \+ tv\)\;\n\n                \/\/Inside main method we define an original TV object based on a class \(template for creating Java objects\)\.\n                Tv samsung \= new Tv\(new Screen\(\&quot;LCD\&quot;\)\)\;\n                samsung\.turnOn\(\)\;\n                Device device \= new Device\(\&quot;2014 Mhz\&quot;\, \&quot;Off \&quot;\)\;\n                samsung \= new Tv\(\&quot;Samsung\&quot;\, new Resolution\(1920\, 1080\)\, new Screen\(\&quot;Ultra HD\&quot;\)\)\;\n                samsung\.turnOff\(\)\;\n                Resolution resolution \= new Resolution\(1920\, 1080\)\;\n                Screen screen \= new Screen\(\&quot;HD ready\&quot;\)\;\n                samsung \= new Tv\(\&quot;Samsung\&quot;\, resolution\, screen\, device\.getInternalProcessor\(\)\, device\.getPowerStatus\(\)\)\;\n                samsung\.turnOn\(\)\;\n\n                Device factoryDevice \= device\.getFactoryInstance\(\)\;\n                System\.out\.println\(\&quot;Default processor is\: \&quot; \+ factoryDevice\.getInternalProcessor\(\)\)\;\n                factoryDevice \= factoryDevice\.getDeviceDefaultImplementation\(\)\;\n                System\.out\.println\(factoryDevice\.getInternalProcessor\(\)\)\;\n\n                String type \= samsung\.getScreen\(\)\.getType\(\)\; \/\/access a particular screen attribute using the Tv object\.\n                samsung\.getScreen\(\)\.setType\(\&quot;Q\&quot; \+ type\)\; \/\/Method chaining\n\n        \/\*\n        instanceof operator is used to test whether the object is an instance\n        of the specified class or subclass or interface\n        \*\/\n                \/\/polymorphism example\n                if \(type instanceof String\) \{\n                    type \= device\.showPolymorphism\(\)\;\n                    System\.out\.println\(type\)\;\n                    type \= samsung\.showPolymorphism\(\)\;\n                    System\.out\.println\(type\)\;\n                \}\n\n                \/\/ Tv class implements Cloneable interface to avoid CloneNotSupportedException being thrown\n                \/\/ define a cloned object\n                Tv samsungCloned \= null\;\n                try \{\n                    samsungCloned \= \(Tv\) samsung\.getClone\(\)\;\n                \} catch \(CloneNotSupportedException e\) \{\n                    e\.printStackTrace\(\)\;\n                \}\n                samsungCloned\.turnOff\(\)\;\n\n                Screen fullHd \= new Screen\(\&quot;Full HD\&quot;\)\;\n                samsungCloned\.setScreen\(fullHd\)\;\n                System\.out\.println\(\&quot;Samsung cloned object has a screen with a new type of screen\: \&quot; \+ samsungCloned\.getScreen\(\)\.getType\(\) \+ \&quot; \&quot;\)\;\n                samsungCloned\.turnOff\(\)\;\n\n                Engine engine \= new Engine\(\&quot;AGH model\&quot;\, \&quot;Volkswagen\&quot;\, 1888\)\;\n                Door door \= new Door\(4\)\;\n                Car car \= new Car\(\&quot;Golf 4\&quot;\, engine\, door\, 4\)\;\n                car\.startVehicle\(\)\;\n                car\.stopVehicle\(\)\;\n\n                \/\/handle checkType\n                try \{\n                    boolean value \= Vehicle\.checkType\(car\, \&quot;com\.sherbansoftware\.Car\&quot;\)\;\n                    System\.out\.println\(\&quot;value is\: \&quot; \+ value\)\;\n                \} catch \(ClassNotFoundException e\) \{\n                    System\.out\.println\(e\.getMessage\(\) \+ \&quot; \&quot; \+ e\.getCause\(\)\)\;\n                \}\n            \}\n        \}\)\;\n        \n    \}\n\n\}\n</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -185,8 +178,8 @@
         <option value="$PROJECT_DIR$/src/com/sherbansoftware/IVehicle.java" />
         <option value="$PROJECT_DIR$/src/com/sherbansoftware/Vehicle.java" />
         <option value="$PROJECT_DIR$/src/com/sherbansoftware/Device.java" />
-        <option value="$PROJECT_DIR$/src/com/sherbansoftware/Main.java" />
         <option value="$PROJECT_DIR$/src/com/sherbansoftware/IPolymorphicDevice.java" />
+        <option value="$PROJECT_DIR$/src/com/sherbansoftware/Main.java" />
       </list>
     </option>
   </component>
@@ -235,7 +228,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/IntelliJ_Java_Programs/05. Inheritance, composition, polymorphism, encapsulation and constructors/src/com/sherbansoftware/Main.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538924781298" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539006766309" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -364,6 +357,14 @@
       <option name="presentableId" value="Default" />
       <updated>1497693548432</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add JDK9 private, static and default methods in interfaces">
+      <created>1538924904860</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1538924904860</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -397,23 +398,15 @@
       <window_info anchor="right" id="Commander" order="6" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.23373677" />
+      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.10363086" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add JDK9 private, static and default methods in interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add JDK9 private, static and default methods in interfaces" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -506,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/IPolymorphicDevice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -524,6 +510,17 @@
             <element signature="e#443#444#0" expanded="true" />
             <element signature="e#483#484#0" expanded="true" />
             <element signature="e#546#547#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sherbansoftware/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
           </folding>
         </state>
       </provider>
